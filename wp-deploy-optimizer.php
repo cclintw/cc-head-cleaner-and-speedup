@@ -1,9 +1,11 @@
 <?php
 /**
- * Plugin Name: CC WP Deploy Optimizer
- * Description: 一鍵最佳化 WordPress 安全、效能、設定，支援後台開關、分群組、顯示 hook 與 HTML 範例。
+ * Plugin Name: CC WP Performance and Optimizer
+ * Description: 清理&lt;<head>&lg;不必要的 Meta/Link/Script 輸出，以及移除不必要的 WP 內建不必要的 JS/CSS 載入、外部資源請求，以提升網站效能與安全性，並符合隱私。
  * Version: 1.0
- * Author: 開發超級助理
+ * Author: Chance Lin
+ * Text Domain: cc-performance-optimizer
+ * License: GPL2+
  */
 if (!defined('ABSPATH')) exit;
 
