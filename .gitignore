@@ -1,0 +1,48 @@
+# === macOS ===
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# === Windows ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Node.js / Frontend tools ===
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Composer ===
+vendor/
+
+# === Editor settings ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === WordPress related ===
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# === Backup & Temp ===
+*.bak
+*.tmp
+*.swp
+*.swo
+*.zip
+*.tar.gz
+
+# === PHPUnit ===
+.phpunit.result.cache
+coverage/
+
+# === Lock files (optional) ===
+# composer.lock
+# package-lock.json
