@@ -1,15 +1,37 @@
+<?php
+// Include plugin setting data
+include CCPO_PLUGIN_DIR . 'includes/settings-data.php';
+?>
 
-<?php include WDO_PLUGIN_DIR . 'includes/settings-data.php'; ?>
 <div class="wrap">
-    <h1>WP Performance and Optimizer</h1>
-    <p>清理 &lt;head&gt; 不必要的 Meta/Link/Script 輸出，以及移除不必要的 WP 內建不必要的 JS/CSS 載入、外部資源請求，以提升網站效能與安全性，並符合隱私。</p>
+    <h1><?php esc_html_e( 'WP Performance and Optimizer', 'cc-performance-optimizer' ); ?></h1>
+    <p>
+        <?php esc_html_e( 'Clean unnecessary <head> Meta/Link/Script outputs, remove default WordPress JS/CSS loading and external resource requests to enhance site performance, security, and privacy compliance.', 'cc-performance-optimizer' ); ?>
+    </p>
+    
     <form method="post" action="options.php">
-        <?php settings_fields('wdo_settings_group'); ?>
+        <?php settings_fields( 'wdo_settings_group' ); ?>
+        
         <?php
-        wdo_render_group_table(htmlspecialchars('清理 <head> 輸出'),$slug[0], $group_head);
-        wdo_render_group_table(htmlspecialchars('停用功能'), $slug[1], $group_features);
-        wdo_render_group_table(htmlspecialchars('系統設定(wp-config.php)'), $slug[2], $group_config);
+        wdo_render_group_table(
+            __( 'Clean <head> output', 'cc-performance-optimizer' ),
+            $slug[0],
+            $group_head
+        );
+
+        wdo_render_group_table(
+            __( 'Disable features', 'cc-performance-optimizer' ),
+            $slug[1],
+            $group_features
+        );
+
+        wdo_render_group_table(
+            __( 'System configuration (wp-config.php)', 'cc-performance-optimizer' ),
+            $slug[2],
+            $group_config
+        );
         ?>
+        
         <?php submit_button(); ?>
     </form>
 </div>

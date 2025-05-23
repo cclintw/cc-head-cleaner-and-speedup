@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-23 17:59+0800\n"
+"PO-Revision-Date: 2025-05-23 18:40+0800\n"
+"Last-Translator: 您的名稱 <您的電子郵件>\n"
+"Language-Team: 繁體中文 <zh_TW@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Clean unnecessary head elements to improve performance, security, and privacy."
+msgstr "清除 head 中不必要的元素，提升效能、安全性與隱私。"
+
+#: includes/settings-page.php:9
+msgid "WP Performance Optimizer Settings"
+msgstr "WP 效能優化器設定"
+
+#: includes/settings-page.php:10
+msgid "Performance Optimizer"
+msgstr "效能優化器"
+
+#: includes/settings-data.php:51
+msgid "Remove"
+msgstr "移除"
+
+#: includes/settings-data.php:52
+msgid "Disable"
+msgstr "停用"
+
+#: includes/settings-data.php:53
+msgid "Config"
+msgstr "設定"
+
+#: includes/settings-data.php:58
+msgid "Remove WP Generator Version"
+msgstr "移除 WP 版本資訊"
+
+#: includes/settings-data.php:59
+msgid "Removes the WordPress version meta tag for improved security."
+msgstr "移除 WordPress 版本的 meta 標籤以提升安全性。"
+
+#: includes/settings-data.php:64
+msgid "Remove Auto Sizes CSS Output"
+msgstr "移除自動尺寸 CSS 輸出"
+
+#: includes/settings-data.php:65
+msgid ""
+"Removes inline CSS styles automatically generated for responsive images."
+msgstr "移除為響應式圖片自動產生的內嵌 CSS 樣式。"
+
+#: includes/settings-data.php:70
+msgid "Remove RSD Link"
+msgstr "移除 RSD 連結"
+
+#: includes/settings-data.php:71
+msgid "Removes the RSD (Really Simple Discovery) link, which is rarely used."
+msgstr "移除 RSD（Really Simple Discovery）連結，該功能已鮮少使用。"
+
+#: includes/settings-data.php:76
+msgid "Remove WLW Manifest Link"
+msgstr "移除 WLW 清單連結"
+
+#: includes/settings-data.php:77
+msgid "Removes the Windows Live Writer manifest link, which is obsolete."
+msgstr "移除 Windows Live Writer 清單連結，該功能已過時。"
+
+#: includes/settings-data.php:82
+msgid "Remove Shortlink"
+msgstr "移除短連結"
+
+#: includes/settings-data.php:83
+msgid "Removes shortlink tag from the head and HTTP headers."
+msgstr "從 head 與 HTTP 標頭中移除短連結標籤。"
+
+#: includes/settings-data.php:88
+msgid "Remove Feed Links"
+msgstr "移除 Feed 連結"
+
+#: includes/settings-data.php:89
+msgid "Removes all post and comment feed link tags from the head."
+msgstr "從 head 中移除所有文章與留言的 feed 連結標籤。"
+
+#: includes/settings-data.php:94
+msgid "Remove REST API Link"
+msgstr "移除 REST API 連結"
+
+#: includes/settings-data.php:95
+msgid "Removes REST API discovery link from the head."
+msgstr "從 head 中移除 REST API 探索連結。"
+
+#: includes/settings-data.php:100
+msgid "Remove oEmbed Discovery Links"
+msgstr "移除 oEmbed 探索連結"
+
+#: includes/settings-data.php:101
+msgid ""
+"Removes oEmbed discovery links from the head. Does not disable oEmbed "
+"functionality."
+msgstr "從 head 中移除 oEmbed 探索連結，但不會停用 oEmbed 功能。"
+
+#: includes/settings-data.php:106
+msgid "Remove Rel Prev/Next Links"
+msgstr "移除 Rel Prev/Next 連結"
+
+#: includes/settings-data.php:107
+msgid "Removes adjacent post relationship link tags (prev/next)."
+msgstr "移除相鄰文章的關聯連結標籤（prev/next）。"
+
+#: includes/settings-data.php:112
+msgid "Remove XFN Profile Link"
+msgstr "移除 XFN 個人檔案連結"
+
+#: includes/settings-data.php:113
+msgid "Removes the XFN profile link, which is rarely needed."
+msgstr "移除 XFN 個人檔案連結，該功能已鮮少需要。"
+
+#: includes/settings-data.php:118
+msgid "Remove DNS Prefetch"
+msgstr "移除 DNS 預取"
+
+#: includes/settings-data.php:119
+msgid "Removes DNS prefetch links for performance/privacy purposes."
+msgstr "為提升效能與隱私，移除 DNS 預取連結。"
+
+#: includes/settings-data.php:124
+msgid "Remove Emoji Output"
+msgstr "移除 Emoji 輸出"
+
+#: includes/settings-data.php:125
+msgid "Disables emoji-related scripts and styles added in the head."
+msgstr "停用在 head 中新增的與 Emoji 相關的腳本與樣式。"
+
+#: includes/settings-data.php:130
+msgid "Remove Gutenberg Block CSS"
+msgstr "移除 Gutenberg 區塊 CSS"
+
+#: includes/settings-data.php:131
+msgid "Removes default Gutenberg block style CSS from the front end."
+msgstr "從前端移除預設的 Gutenberg 區塊樣式 CSS。"
+
+#: includes/settings-data.php:136
+msgid "Remove Gutenberg Theme Enhancements"
+msgstr "移除 Gutenberg 主題增強功能"
+
+#: includes/settings-data.php:137
+msgid "Removes wp-block-library-theme CSS for block-based themes."
+msgstr "移除區塊型主題的 wp-block-library-theme CSS。"
+
+#: includes/settings-data.php:142
+msgid "Remove Global Styles Inline CSS"
+msgstr "移除全域樣式內嵌 CSS"
+
+#: includes/settings-data.php:143
+msgid "Removes inline CSS generated from theme.json."
+msgstr "移除由 theme.json 產生的內嵌 CSS。"
+
+#: includes/settings-data.php:148
+msgid "Remove Classic Theme Styles"
+msgstr "移除經典主題樣式"
+
+#: includes/settings-data.php:149
+msgid "Removes classic theme compatibility styles injected by WordPress."
+msgstr "移除 WordPress 插入的經典主題相容性樣式。"
+
+#: includes/settings-data.php:156
+msgid "Disable Global Styles"
+msgstr "停用全域樣式"
+
+#: includes/settings-data.php:157
+msgid "Disables Gutenberg-generated global stylesheets."
+msgstr "停用 Gutenberg 產生的全域樣式表。"
+
+#: includes/settings-data.php:162
+msgid "Disable Image Auto Sizes CSS"
+msgstr "停用圖片自動尺寸 CSS"
+
+#: includes/settings-data.php:163
+msgid "Disables auto-generated image sizing CSS."
+msgstr "停用自動產生的圖片尺寸 CSS。"
+
+#: includes/settings-data.php:168
+msgid "Disable Block Editor"
+msgstr "停用區塊編輯器"
+
+#: includes/settings-data.php:169
+msgid "Disables the block editor for posts and widgets."
+msgstr "停用文章與小工具的區塊編輯器。"
+
+#: includes/settings-data.php:174
+msgid "Disable Emoji Scripts"
+msgstr "停用 Emoji 腳本"
+
+#: includes/settings-data.php:175
+msgid ""
+"Disables emoji scripts, styles, TinyMCE plugin, and email/feed HTML "
+"conversion."
+msgstr "停用 Emoji 腳本、樣式、TinyMCE 外掛，以及電子郵件/Feed 的 HTML 轉換功能。"
+
+#: includes/settings-data.php:180
+msgid "Disable oEmbed Support"
+msgstr "停用 oEmbed 支援"
+
+#: includes/settings-data.php:181
+msgid ""
+"Disables oEmbed API routes and prevents external sites from embedding your "
+"content."
+msgstr "停用 oEmbed API 路由，防止外部網站嵌入您的內容。"
+
+#: includes/settings-data.php:186
+msgid "Disable All RSS Feed Routes"
+msgstr "停用所有 RSS Feed 路由"
+
+#: includes/settings-data.php:187
+msgid "Blocks all RSS feed routes to prevent public access to your feeds."
+msgstr "封鎖所有 RSS Feed 路由，防止公眾存取您的 Feed。"
+
+#: includes/settings-data.php:192
+msgid "Remove Built-in Widgets"
+msgstr "移除內建小工具"
+
+#: includes/settings-data.php:193
+msgid "Removes default widgets like RSS and Meta to reduce clutter."
+msgstr "移除如 RSS 和 Meta 等預設小工具，以減少混亂。"
+
+#: includes/settings-data.php:198
+msgid "Disable Heartbeat API"
+msgstr "停用 Heartbeat API"
+
+#: includes/settings-data.php:199
+msgid "Disables AJAX Heartbeat requests to reduce server load."
+msgstr "停用 AJAX Heartbeat 請求，以減輕伺服器負載。"
+
+#: includes/settings-data.php:204
+msgid "Disable Autosave"
+msgstr "停用自動儲存"
+
+#: includes/settings-data.php:205
+msgid "Disables auto draft saving to prevent unnecessary post revisions."
+msgstr "停用自動儲存草稿，以防止不必要的文章修訂。"
+
+#: includes/settings-data.php:210
+msgid "Move jQuery to Footer"
+msgstr "將 jQuery 移至頁尾"
+
+#: includes/settings-data.php:211
+msgid ""
+"Moves jQuery to the footer for faster first render. Ensure theme "
+"compatibility."
+msgstr "將 jQuery 移至頁尾，以加快首次渲染速度。請確保主題相容性。"
+
+#: includes/settings-data.php:216
+
+#: includes/settings-data.php:217
+msgid "Redirects or blocks all /feed/ URLs to prevent feed access."
+msgstr "重新導向或封鎖所有 /feed/ URL，以防止存取 Feed。"
+
+#: includes/settings-data.php:222
+msgid "Remove jQuery Library"
+msgstr "移除 jQuery 函式庫"
+
+#: includes/settings-data.php:223
+msgid "If not required by your theme/plugins, remove jQuery to reduce load time."
+msgstr "若您的主題或外掛不需要，移除 jQuery 以減少載入時間。"
+
+#: includes/settings-data.php:228
+msgid "Remove jQuery Migrate"
+msgstr "移除 jQuery Migrate"
+
+#: includes/settings-data.php:229
+msgid "Removes backward compatibility layer for old jQuery APIs."
+msgstr "移除舊版 jQuery API 的向後相容層。"
+
+#: includes/settings-data.php:234
+msgid "Remove Comment Reply Script"
+msgstr "移除留言回覆腳本"
+
+#: includes/settings-data.php:235
+msgid "Removes threaded comments JS if reply functionality is unused."
+msgstr "若未使用回覆功能，移除巢狀留言的 JavaScript。"
+
+#: includes/settings-data.php:240
+msgid "Remove Polyfill Scripts"
+msgstr "移除 Polyfill 腳本"
+
+#: includes/settings-data.php:241
+msgid "Removes legacy browser compatibility scripts like for IE11."
+msgstr "移除如 IE11 等舊版瀏覽器的相容性腳本。"
+
+#: includes/settings-data.php:246
+msgid "Remove Admin Bar Scripts"
+msgstr "移除管理列腳本"
+
+#: includes/settings-data.php:247
+msgid "Removes frontend admin bar JS if admin bar is disabled."
+msgstr "若已停用管理列，移除前端的管理列 JavaScript。"
+
+#: includes/settings-data.php:252
+msgid "Remove WP AJAX Response Script"
+msgstr "移除 WP AJAX 回應腳本"
+
+#: includes/settings-data.php:253
+msgid "If not using frontend forms, removes wp-ajax-response.js."
+msgstr "若未使用前端表單，移除 wp-ajax-response.js。"
+
+#: includes/settings-data.php:258
+msgid "Remove Password Strength Checker"
+msgstr "移除密碼強度檢查器"
+
+#: includes/settings-data.php:259
+msgid "Removes zxcvbn async JS for password strength estimation."
+msgstr "移除用於密碼強度估算的 zxcvbn 非同步 JavaScript。"
+
+#: includes/settings-data.php:264
+msgid "Remove Password Strength Meter"
+msgstr "移除密碼強度指示器"
+
+#: includes/settings-data.php:265
+msgid "Disables strength indicator in password input forms."
+msgstr "停用密碼輸入表單中的強度指示器。"
+
+#: includes/settings-data.php:270
+msgid "Remove Thickbox Script"
+msgstr "移除 Thickbox 腳本"
+
+#: includes/settings-data.php:271
+msgid "Removes legacy Thickbox lightbox scripts if unused."
+msgstr "若未使用，移除舊版 Thickbox lightbox 腳本。"
+
+#: includes/settings-data.php:278
+msgid "Disable Post Revisions"
+msgstr "停用文章修訂"
+
+#: includes/settings-data.php:279
+msgid "Prevents WordPress from storing multiple old revisions of posts to reduce database load."
+msgstr "防止 WordPress 儲存多個舊版文章修訂，以減少資料庫負載。"
+
+#: includes/settings-data.php:284
+msgid "Set Trash Retention to 7 Days"
+msgstr "設定垃圾桶保留期限為 7 天"
+
+#: includes/settings-data.php:285
+msgid "Automatically deletes trashed content after 7 days to save space."
+msgstr "自動在 7 天後刪除垃圾桶內容，以節省空間。"
+
+#: includes/settings-data.php:290
+msgid "Adjust Autosave Interval (300 seconds)"
+msgstr "調整自動儲存間隔（300 秒）"
+
+#: includes/settings-data.php:291
+msgid "Reduces autosave frequency to lower the number of HTTP requests."
+msgstr "降低自動儲存頻率，以減少 HTTP 請求數量。"
+
+#: includes/settings-data.php:296
+msgid "Increase PHP Memory Limits"
+msgstr "增加 PHP 記憶體限制"
+
+#: includes/settings-data.php:297
+msgid "Improves stability during large file uploads or plugin operations by raising memory limits."
+msgstr "透過提高記憶體限制，提升大型檔案上傳或外掛操作時的穩定性。"
+
+#: includes/settings-data.php:302
+msgid "Disable WP Cron (use system cron)"
+msgstr "停用 WP Cron（使用系統排程）"
+
+#: includes/settings-data.php:303
+msgid "Prevents fake cron jobs on every page load; requires system-level cron replacement."
+msgstr "防止每次頁面載入時執行虛擬排程任務；需要使用系統層級的排程替代。"
+
+#: includes/settings-ui.php:17
+msgid "Clean <head> output"
+msgstr "清理 <head> 輸出"
+
+#: includes/settings-ui.php:23
+msgid "Disable features"
+msgstr "停用功能"
+
+#: includes/settings-ui.php:29
+msgid "System configuration (wp-config.php)"
+msgstr "系統設定（wp-config.php）"
