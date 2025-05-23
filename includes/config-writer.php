@@ -9,14 +9,14 @@ register_activation_hook(__FILE__, function () {
     $marker = "/* That's all, stop editing! Happy publishing. */";
     $defines = [];
 
-    if (isset($opt['define_revisions'])) $defines[] = "define('WP_POST_REVISIONS', false);";
-    if (isset($opt['define_trash_days'])) $defines[] = "define('EMPTY_TRASH_DAYS', 7);";
-    if (isset($opt['define_autosave_interval'])) $defines[] = "define('AUTOSAVE_INTERVAL', 300);";
-    if (isset($opt['define_memory_limit'])) {
+    if (!empty($opt['define_revisions'])) $defines[] = "define('WP_POST_REVISIONS', false);";
+    if (!empty($opt['define_trash_days'])) $defines[] = "define('EMPTY_TRASH_DAYS', 7);";
+    if (!empty($opt['define_autosave_interval'])) $defines[] = "define('AUTOSAVE_INTERVAL', 300);";
+    if (!empty($opt['define_memory_limit'])) {
         $defines[] = "define('WP_MEMORY_LIMIT', '128M');";
         $defines[] = "define('WP_MAX_MEMORY_LIMIT', '256M');";
     }
-    if (isset($opt['define_disable_wp_cron'])) $defines[] = "define('DISABLE_WP_CRON', true);";
+    if (!empty($opt['define_disable_wp_cron'])) $defines[] = "define('DISABLE_WP_CRON', true);";
 
     foreach ($defines as $line) {
         if (strpos($content, $line) === false) {

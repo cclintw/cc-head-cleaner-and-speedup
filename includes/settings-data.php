@@ -3,10 +3,11 @@ function wdo_render_group_table($title, $desc, $slug, $items) {
     $options = get_option('wdo_settings');
     echo "<h3>$title</h3>";
     echo "<p>$desc</p>";
+
     echo "<table class='widefat fixed striped'><thead><tr>
         <th style='width:5%;'>$slug</th>
-        <th style='width:25%;'>項目</th>
-        <th style='width:70%;'>HTML 輸出範例</th>
+        <th style='width:35%;'>項目</th>
+        <th style='width:60%;'>HTML 輸出範例</th>
     </tr></thead><tbody>";
 
     foreach ($items as $item) {
@@ -36,132 +37,171 @@ $desc =['移除不必要的<head>資訊','停用不必要的 script 以及引入
 $group_head = [
  [
         'id' => 'remove_wp_generator',
-        'label' => '移除 WordPress 版本資訊',
-        'desc' => '從 <head> 移除 <meta name="generator"> 標籤。',
+        'label' => 'Remove WP Generator Version',
+        'desc' => 'Displays the WordPress version number. May expose site to security risks. Recommended to remove.',
         'html' => '<meta name="generator" content="WordPress 6.x" />',
         'hook' => 'remove_action("wp_head", "wp_generator");',
     ],
     [
+        'id' => 'remove_auto_sizes_css_output',
+        'label' => 'Remove auto sizes css output',
+        'desc' => 'remove auto sizes css output',
+        'html' => '<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>',
+        'hook' => '----',
+    ],
+    
+    [
         'id' => 'remove_rsd_link',
-        'label' => '移除 RSD Link 輸出',
-        'desc' => '移除 <link rel="EditURI">（XML-RPC 用）。',
-        'html' => '<link rel="EditURI" ... />',
+        'label' => 'Remove RSD Link',
+        'desc' => 'Provides remote blog API (Really Simple Discovery). Obsolete and rarely used.',
+        'html' => '<link rel="EditURI" type="application/rsd+xml" href="https://example.com/xmlrpc.php?rsd">',
         'hook' => 'remove_action("wp_head", "rsd_link");',
     ],
     [
         'id' => 'remove_wlwmanifest_link',
-        'label' => '移除 WLW Link',
-        'desc' => 'Windows Live Writer 用的 <link>，已過時。',
-        'html' => '<link rel="wlwmanifest" ... />',
+        'label' => 'Remove WLW Link',
+        'desc' => 'Windows Live Writer manifest link. No longer used.',
+        'html' => '<link rel="wlwmanifest" href="https://example.com/wlwmanifest.xml">',
         'hook' => 'remove_action("wp_head", "wlwmanifest_link");',
     ],
     [
         'id' => 'remove_shortlink',
-        'label' => '移除 Shortlink',
-        'desc' => '移除 <link rel="shortlink"> 出現在 <head>。',
-        'html' => '<link rel="shortlink" href="?p=123" />',
-        'hook' => 'remove_action("wp_head", "wp_shortlink_wp_head");',
+        'label' => 'Remove Shortlink',
+        'desc' => '移除 <head> 中的短網址，以及移除 HTTP Header 中的標題',
+        'html' => '<link rel="shortlink" href="https://example.com/?p=123"> Link: <https://example.com/?p=123>; rel=shortlink',
+        'hook' => 'remove_action("wp_head", "wp_shortlink_wp_head");
+        remove_action("template_redirect", "wp_shortlink_header", 11);',
     ],
     [
         'id' => 'remove_feed_links',
         'label' => '移除 Feed Link 輸出',
-        'desc' => '保留 Feed 功能，但不在 <head> 中顯示 link。',
-        'html' => '<link rel="alternate" type="application/rss+xml" ...>',
+        'desc' => 'This will Removes post and comment RSS links output.',
+        'html' => '<link rel="alternate" type="application/rss+xml" title=".." href="http://example.com/?feed=rss2" /><br>
+<link rel="alternate" type="application/rss+xml" title="..." href="http://example.com/?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title=".." href="http://example.com/?feed=rss2&#038;p=81" />
+<script>',
         'hook' => 'remove_action("wp_head", "feed_links");<br>remove_action("wp_head", "feed_links_extra");',
     ],
     [
         'id' => 'remove_rest_api_link',
-        'label' => '移除 REST API Link',
-        'desc' => '從 <head> 中移除 wp-json rel 連結。',
+        'label' => 'Remove REST API Link',
+        'desc' => 'remove <head> wp-json rel link。',
         'html' => '<link rel="https://api.w.org/" href="/wp-json/" />',
         'hook' => 'remove_action("wp_head", "rest_output_link_wp_head");',
     ],
     [
         'id' => 'remove_oembed_links',
-        'label' => '移除 oEmbed Link',
-        'desc' => '移除嵌入支援的 discovery link。',
-        'html' => '<link rel="alternate" type="application/json+oembed" />',
+        'label' => 'remobe oEmbed Link',
+        'desc' => 'Removes oEmbed discovery link from <head>. Does not disable functionality.',
+        'html' => '<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="http://example.com/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=...." />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="http://ecample.com?rest_route=embed;url=...;format=xml" />
+</head>',
         'hook' => 'remove_action("wp_head", "wp_oembed_add_discovery_links");',
     ],
     [
         'id' => 'remove_post_rel_links',
-        'label' => '移除 Prev/Next Link',
-        'desc' => '移除 rel="prev/next/start" 導覽標籤。',
+        'label' => 'remove Prev/Next Link',
+        'desc' => 'remove rel="prev/next/start" navigation tag。',
         'html' => '<link rel="next" href="..." />',
         'hook' => 'remove_action("wp_head", "adjacent_posts_rel_link_wp_head");',
     ],
     [
         'id' => 'remove_profile_link',
-        'label' => '移除 XHTML Profile',
-        'desc' => '移除 <head profile="..."> 標籤。',
-        'html' => '<head profile="http://gmpg.org/xfn/11">',
+        'label' => 'Remove Profile Link',
+        'desc' => 'XFN profile link. Rarely used and can be removed.',
+        'html' => '<link rel="profile" href="https://gmpg.org/xfn/11">',
         'hook' => 'remove_action("wp_head", "index_rel_link");',
     ],
     [
         'id' => 'remove_dns_prefetch',
-        'label' => '移除 DNS Prefetch',
-        'desc' => '清除 <link rel="dns-prefetch"> 標籤。',
-        'html' => '<link rel="dns-prefetch" href="//s.w.org" />',
+        'label' => 'Remove DNS Prefetch',
+        'desc' => 'Removes dns-prefetch hints from <head>.',
+        'html' => '<link rel="dns-prefetch" href="//s.w.org" /><link rel="dns-prefetch" href="//fonts.googleapis.com">',
         'hook' => 'remove_action("wp_head", "wp_resource_hints", 2);',
     ],
     [
         'id' => 'remove_emoji_output',
-        'label' => '移除 Emoji 輸出',
-        'desc' => '移除 emoji 的 JS、CSS 標籤。',
-        'html' => '<script src="...emoji.js"></script>',
-        'hook' => 'remove_action("wp_head", "print_emoji_detection_script");<br>remove_action("wp_print_styles", "print_emoji_styles");',
+        'label' => 'Remove Emoji output',
+        'desc' => 'remove emoji JS、CSS tags。',
+        'html' => '<script src="/wp-includes/js/wp-emoji-release.min.js"></script>',
+        'hook' => 'remove_action("wp_head", "print_emoji_detection_script");',
     ],
     [
         'id' => 'remove_gutenberg_css',
-        'label' => '移除 Gutenberg CSS',
-        'desc' => '移除 wp-block-library CSS（前端樣式）。',
-        'html' => '<link rel="stylesheet" href="...block-library.css" />',
+        'label' => 'Remove Gutenberg CSS',
+        'desc' => 'Removes frontend block styles',
+        'html' => '<link rel="stylesheet" href="/wp-includes/css/dist/block-library/style.min.css">',
         'hook' => 'wp_dequeue_style("wp-block-library");',
     ],
     [
         'id' => 'remove_wp_block_theme_css',
-        'label' => '移除 Gutenberg 主題 CSS',
-        'desc' => 'wp-block-library-theme 補強樣式。',
+        'label' => 'Remove Gutenberg theme CSS',
+        'desc' => 'wp-block-library-theme enhance css。',
         'html' => '<link rel="stylesheet" href="...theme.css" />',
         'hook' => 'wp_dequeue_style("wp-block-library-theme");',
     ],
     [
         'id' => 'remove_global_styles',
-        'label' => '移除 Global Styles CSS',
+        'label' => 'Remove Global Styles CSS output',
         'desc' => '移除 theme.json 自動生成 CSS。',
         'html' => '<style id="global-styles-inline-css">',
-        'hook' => 'wp_dequeue_style("global-styles");',
+        'hook' => 'remove_action("wp_enqueue_scripts", "wp_enqueue_global_styles");',
     ],
     [
         'id' => 'remove_classic_theme_styles',
-        'label' => '移除 Classic Theme Styles',
-        'desc' => '移除 WordPress 自動加入的經典主題補強樣式（style#classic-theme-styles-inline-css）。',
+        'label' => 'Remove Classic Theme Styles',
+        'desc' => 'Remove WordPress 自動加入的經典主題補強樣式（style#classic-theme-styles-inline-css）。',
         'html' => '<style id="classic-theme-styles-inline-css">...</style>',
         'hook' => 'wp_dequeue_style("classic-theme-styles");<br>wp_deregister_style("classic-theme-styles");',
     ],
 ];
 $group_features = [
     [
-        'id' => 'remove_global_styles',
-        'label' => '停用 Global Styles',
-        'desc' => '停用 Gutenberg 所產生的 global styles 樣式。',
-        'html' => '<style id="global-styles-inline-css">...</style>',
+        'id' => 'disable_global_styles',
+        'label' => 'Disable Global Styles',
+        'desc' => 'Dequeue Gutenberg 所產生的 global styles 樣式。',
+        'html' => '<!--disable global styles-->',
         'hook' => 'wp_dequeue_style("global-styles");',
     ],
+
     [
-        'id' => 'remove_gutenberg_css',
-        'label' => '移除 Gutenberg CSS',
-        'desc' => '若未使用區塊編輯器，可移除前端 CSS 載入。',
-        'html' => '<link rel="stylesheet" href="...block-library.css" />',
-        'hook' => 'wp_dequeue_style("wp-block-library");',
+        'id' => 'disable_auto_sizes_css',
+        'label' => 'Disable image auto sizes css',
+        'desc' => 'Disable Image auto sizes css',
+        'html' => '<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>',
+        'hook' => 'add_filter("wp_img_tag_add_auto_sizes", "__return_false");',
     ],
+
     [
         'id' => 'disable_block_editor',
-        'label' => '停用區塊編輯器',
-        'desc' => '恢復經典編輯器介面（Classic Editor），更輕量。',
-        'html' => '進入文章時顯示傳統編輯器',
+        'label' => 'Disable Block Editor',
+        'desc' => 'Disables block editor for posts and widgets.',
+        'html' => '<!-- block editor removed -->',
         'hook' => 'add_filter("use_block_editor_for_post", "__return_false");',
     ],
+    [
+        'id' => 'disable_emoji_support',
+        'label' => 'Disable Emoji Scripts',
+        'desc' => 'Disable all Emoji support,包括後台載入Emoji以及偵測用的 Javascript,移除TinyMCE 傳統編輯器中的 Emoji,防止載入 emoji 圖片資源,移除 rss 文章內、留言、Email 中的 emoji heml 轉換',
+        'html' => '<script src="/wp-includes/js/wp-emoji-release.min.js"></script>',
+        'hook' => 'remove_action("wp_print_styles", "print_emoji_styles");',
+    ],
+[
+        'id' => 'disable_oembed_route',
+        'label' => 'disable_oembed',
+        'desc' => '停用你的網站被人嵌入的功能，包括停用 oEmbed API 路由以及阻止外部網站取得你的 oEmbed 資訊',
+        'html' => '<!--停用網站被嵌入以及 rest api oembed-->',
+        'hook' => 'remove_action("rest_api_init", "wp_oembed_register_route");',
+    ],
+
+    [
+        'id' => 'disable_all_feeds',
+        'label' => '封鎖所有 RSS Feed 路由',
+        'desc' => '封鎖所有 RSS Feed 路由，防止使用者或爬蟲存取 Feed 資源',
+        'html' => '<!--  -->',
+        'hook' => 'disable_feeds_redirect;',
+    ],
+
     [
         'id' => 'remove_widgets',
         'label' => '移除內建 Widgets',
