@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the CC Performance and Optimizer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: CC Performance and Optimizer 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-23 17:59+0800\n"
+"POT-Creation-Date: 2025-05-24 14:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,8 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cc-performance-optimizer.php:99
-msgid "Clean unnecessary head elements to improve performance, security, and privacy."
+#: cc-performance-optimizer.php:34
+msgid "Update Pro"
+msgstr ""
+
+#: cc-performance-optimizer.php:35
+msgid "Document"
+msgstr ""
+
+#: cc-performance-optimizer.php:36
+msgid "View Details"
+msgstr ""
+
+#: includes/feature-toggle.php:123
+msgid "RSS feed is disabled. Please return to the homepage."
 msgstr ""
 
 #: includes/settings-page.php:9
@@ -29,370 +41,374 @@ msgstr ""
 msgid "Performance Optimizer"
 msgstr ""
 
-#: includes/settings-data.php:51
+#: includes/settings-data.php:32
 msgid "Remove"
 msgstr ""
 
-#: includes/settings-data.php:52
+#: includes/settings-data.php:33
 msgid "Disable"
 msgstr ""
 
-#: includes/settings-data.php:53
+#: includes/settings-data.php:34
 msgid "Config"
 msgstr ""
 
-#: includes/settings-data.php:58
+#: includes/settings-data.php:39
 msgid "Remove WP Generator Version"
 msgstr ""
 
-#: includes/settings-data.php:59
+#: includes/settings-data.php:40
 msgid "Removes the WordPress version meta tag for improved security."
 msgstr ""
 
-#: includes/settings-data.php:64
+#: includes/settings-data.php:45
 msgid "Remove Auto Sizes CSS Output"
 msgstr ""
 
-#: includes/settings-data.php:65
+#: includes/settings-data.php:46
 msgid ""
 "Removes inline CSS styles automatically generated for responsive images."
 msgstr ""
 
-#: includes/settings-data.php:70
+#: includes/settings-data.php:50
 msgid "Remove RSD Link"
 msgstr ""
 
-#: includes/settings-data.php:71
+#: includes/settings-data.php:51
 msgid "Removes the RSD (Really Simple Discovery) link, which is rarely used."
 msgstr ""
 
-#: includes/settings-data.php:76
+#: includes/settings-data.php:55
 msgid "Remove WLW Manifest Link"
 msgstr ""
 
-#: includes/settings-data.php:77
+#: includes/settings-data.php:56
 msgid "Removes the Windows Live Writer manifest link, which is obsolete."
 msgstr ""
 
-#: includes/settings-data.php:82
+#: includes/settings-data.php:60
 msgid "Remove Shortlink"
 msgstr ""
 
-#: includes/settings-data.php:83
+#: includes/settings-data.php:61
 msgid "Removes shortlink tag from the head and HTTP headers."
 msgstr ""
 
-#: includes/settings-data.php:88
+#: includes/settings-data.php:65
 msgid "Remove Feed Links"
 msgstr ""
 
-#: includes/settings-data.php:89
+#: includes/settings-data.php:66
 msgid "Removes all post and comment feed link tags from the head."
 msgstr ""
 
-#: includes/settings-data.php:94
+#: includes/settings-data.php:70
 msgid "Remove REST API Link"
 msgstr ""
 
-#: includes/settings-data.php:95
+#: includes/settings-data.php:71
 msgid "Removes REST API discovery link from the head."
 msgstr ""
 
-#: includes/settings-data.php:100
+#: includes/settings-data.php:75
 msgid "Remove oEmbed Discovery Links"
 msgstr ""
 
-#: includes/settings-data.php:101
+#: includes/settings-data.php:76
 msgid ""
 "Removes oEmbed discovery links from the head. Does not disable oEmbed "
 "functionality."
 msgstr ""
 
-#: includes/settings-data.php:106
+#: includes/settings-data.php:80
 msgid "Remove Rel Prev/Next Links"
 msgstr ""
 
-#: includes/settings-data.php:107
+#: includes/settings-data.php:81
 msgid "Removes adjacent post relationship link tags (prev/next)."
 msgstr ""
 
-#: includes/settings-data.php:112
+#: includes/settings-data.php:85
 msgid "Remove XFN Profile Link"
 msgstr ""
 
-#: includes/settings-data.php:113
+#: includes/settings-data.php:86
 msgid "Removes the XFN profile link, which is rarely needed."
 msgstr ""
 
-#: includes/settings-data.php:118
+#: includes/settings-data.php:90
 msgid "Remove DNS Prefetch"
 msgstr ""
 
-#: includes/settings-data.php:119
+#: includes/settings-data.php:91
 msgid "Removes DNS prefetch links for performance/privacy purposes."
 msgstr ""
 
-#: includes/settings-data.php:124
+#: includes/settings-data.php:95
 msgid "Remove Emoji Output"
 msgstr ""
 
-#: includes/settings-data.php:125
+#: includes/settings-data.php:96
 msgid "Disables emoji-related scripts and styles added in the head."
 msgstr ""
 
-#: includes/settings-data.php:130
+#: includes/settings-data.php:100
 msgid "Remove Gutenberg Block CSS"
 msgstr ""
 
-#: includes/settings-data.php:131
+#: includes/settings-data.php:101
 msgid "Removes default Gutenberg block style CSS from the front end."
 msgstr ""
 
-#: includes/settings-data.php:136
+#: includes/settings-data.php:105
 msgid "Remove Gutenberg Theme Enhancements"
 msgstr ""
 
-#: includes/settings-data.php:137
+#: includes/settings-data.php:106
 msgid "Removes wp-block-library-theme CSS for block-based themes."
 msgstr ""
 
-#: includes/settings-data.php:142
+#: includes/settings-data.php:110
 msgid "Remove Global Styles Inline CSS"
 msgstr ""
 
-#: includes/settings-data.php:143
+#: includes/settings-data.php:111
 msgid "Removes inline CSS generated from theme.json."
 msgstr ""
 
-#: includes/settings-data.php:148
+#: includes/settings-data.php:115
 msgid "Remove Classic Theme Styles"
 msgstr ""
 
-#: includes/settings-data.php:149
+#: includes/settings-data.php:116
 msgid "Removes classic theme compatibility styles injected by WordPress."
 msgstr ""
 
-#: includes/settings-data.php:156
+#: includes/settings-data.php:122
 msgid "Disable Global Styles"
 msgstr ""
 
-#: includes/settings-data.php:157
+#: includes/settings-data.php:123
 msgid "Disables Gutenberg-generated global stylesheets."
 msgstr ""
 
-#: includes/settings-data.php:162
+#: includes/settings-data.php:127
 msgid "Disable Image Auto Sizes CSS"
 msgstr ""
 
-#: includes/settings-data.php:163
+#: includes/settings-data.php:128
 msgid "Disables auto-generated image sizing CSS."
 msgstr ""
 
-#: includes/settings-data.php:168
+#: includes/settings-data.php:132
 msgid "Disable Block Editor"
 msgstr ""
 
-#: includes/settings-data.php:169
+#: includes/settings-data.php:133
 msgid "Disables the block editor for posts and widgets."
 msgstr ""
 
-#: includes/settings-data.php:174
+#: includes/settings-data.php:137
 msgid "Disable Emoji Scripts"
 msgstr ""
 
-#: includes/settings-data.php:175
+#: includes/settings-data.php:138
 msgid ""
 "Disables emoji scripts, styles, TinyMCE plugin, and email/feed HTML "
 "conversion."
 msgstr ""
 
-#: includes/settings-data.php:180
+#: includes/settings-data.php:142
 msgid "Disable oEmbed Support"
 msgstr ""
 
-#: includes/settings-data.php:181
+#: includes/settings-data.php:143
 msgid ""
 "Disables oEmbed API routes and prevents external sites from embedding your "
 "content."
 msgstr ""
 
-#: includes/settings-data.php:186
+#: includes/settings-data.php:147
 msgid "Disable All RSS Feed Routes"
 msgstr ""
 
-#: includes/settings-data.php:187
+#: includes/settings-data.php:148
 msgid "Blocks all RSS feed routes to prevent public access to your feeds."
 msgstr ""
 
-#: includes/settings-data.php:192
+#: includes/settings-data.php:152
 msgid "Remove Built-in Widgets"
 msgstr ""
 
-#: includes/settings-data.php:193
+#: includes/settings-data.php:153
 msgid "Removes default widgets like RSS and Meta to reduce clutter."
 msgstr ""
 
-#: includes/settings-data.php:198
+#: includes/settings-data.php:157
 msgid "Disable Heartbeat API"
 msgstr ""
 
-#: includes/settings-data.php:199
+#: includes/settings-data.php:158
 msgid "Disables AJAX Heartbeat requests to reduce server load."
 msgstr ""
 
-#: includes/settings-data.php:204
+#: includes/settings-data.php:162
 msgid "Disable Autosave"
 msgstr ""
 
-#: includes/settings-data.php:205
+#: includes/settings-data.php:163
 msgid "Disables auto draft saving to prevent unnecessary post revisions."
 msgstr ""
 
-#: includes/settings-data.php:210
+#: includes/settings-data.php:167
 msgid "Move jQuery to Footer"
 msgstr ""
 
-#: includes/settings-data.php:211
+#: includes/settings-data.php:168
 msgid ""
 "Moves jQuery to the footer for faster first render. Ensure theme "
 "compatibility."
 msgstr ""
 
-#: includes/settings-data.php:216
+#: includes/settings-data.php:172
 msgid "Completely Disable RSS Feed"
 msgstr ""
 
-#: includes/settings-data.php:217
+#: includes/settings-data.php:173
 msgid "Redirects or blocks all /feed/ URLs to prevent feed access."
 msgstr ""
 
-#: includes/settings-data.php:222
+#: includes/settings-data.php:177
 msgid "Remove jQuery Library"
 msgstr ""
 
-#: includes/settings-data.php:223
+#: includes/settings-data.php:178
 msgid ""
 "If not required by your theme/plugins, remove jQuery to reduce load time."
 msgstr ""
 
-#: includes/settings-data.php:228
+#: includes/settings-data.php:182
 msgid "Remove jQuery Migrate"
 msgstr ""
 
-#: includes/settings-data.php:229
+#: includes/settings-data.php:183
 msgid "Removes backward compatibility layer for old jQuery APIs."
 msgstr ""
 
-#: includes/settings-data.php:234
+#: includes/settings-data.php:187
 msgid "Remove Comment Reply Script"
 msgstr ""
 
-#: includes/settings-data.php:235
+#: includes/settings-data.php:188
 msgid "Removes threaded comments JS if reply functionality is unused."
 msgstr ""
 
-#: includes/settings-data.php:240
+#: includes/settings-data.php:192
 msgid "Remove Polyfill Scripts"
 msgstr ""
 
-#: includes/settings-data.php:241
+#: includes/settings-data.php:193
 msgid "Removes legacy browser compatibility scripts like for IE11."
 msgstr ""
 
-#: includes/settings-data.php:246
+#: includes/settings-data.php:197
 msgid "Remove Admin Bar Scripts"
 msgstr ""
 
-#: includes/settings-data.php:247
+#: includes/settings-data.php:198
 msgid "Removes frontend admin bar JS if admin bar is disabled."
 msgstr ""
 
-#: includes/settings-data.php:252
+#: includes/settings-data.php:202
 msgid "Remove WP AJAX Response Script"
 msgstr ""
 
-#: includes/settings-data.php:253
+#: includes/settings-data.php:203
 msgid "If not using frontend forms, removes wp-ajax-response.js."
 msgstr ""
 
-#: includes/settings-data.php:258
+#: includes/settings-data.php:207
 msgid "Remove Password Strength Checker"
 msgstr ""
 
-#: includes/settings-data.php:259
+#: includes/settings-data.php:208
 msgid "Removes zxcvbn async JS for password strength estimation."
 msgstr ""
 
-#: includes/settings-data.php:264
+#: includes/settings-data.php:212
 msgid "Remove Password Strength Meter"
 msgstr ""
 
-#: includes/settings-data.php:265
+#: includes/settings-data.php:213
 msgid "Disables strength indicator in password input forms."
 msgstr ""
 
-#: includes/settings-data.php:270
+#: includes/settings-data.php:217
 msgid "Remove Thickbox Script"
 msgstr ""
 
-#: includes/settings-data.php:271
+#: includes/settings-data.php:218
 msgid "Removes legacy Thickbox lightbox scripts if unused."
 msgstr ""
 
-#: includes/settings-data.php:278
+#: includes/settings-data.php:224
 msgid "Disable Post Revisions"
 msgstr ""
 
-#: includes/settings-data.php:279
+#: includes/settings-data.php:225
 msgid ""
 "Prevents WordPress from storing multiple old revisions of posts to reduce "
 "database load."
 msgstr ""
 
-#: includes/settings-data.php:284
+#: includes/settings-data.php:229
 msgid "Set Trash Retention to 7 Days"
 msgstr ""
 
-#: includes/settings-data.php:285
+#: includes/settings-data.php:230
 msgid "Automatically deletes trashed content after 7 days to save space."
 msgstr ""
 
-#: includes/settings-data.php:290
+#: includes/settings-data.php:234
 msgid "Adjust Autosave Interval (300 seconds)"
 msgstr ""
 
-#: includes/settings-data.php:291
+#: includes/settings-data.php:235
 msgid "Reduces autosave frequency to lower the number of HTTP requests."
 msgstr ""
 
-#: includes/settings-data.php:296
+#: includes/settings-data.php:239
 msgid "Increase PHP Memory Limits"
 msgstr ""
 
-#: includes/settings-data.php:297
+#: includes/settings-data.php:240
 msgid ""
 "Improves stability during large file uploads or plugin operations by raising "
 "memory limits."
 msgstr ""
 
-#: includes/settings-data.php:302
+#: includes/settings-data.php:244
 msgid "Disable WP Cron (use system cron)"
 msgstr ""
 
-#: includes/settings-data.php:303
+#: includes/settings-data.php:245
 msgid ""
 "Prevents fake cron jobs on every page load; requires system-level cron "
 "replacement."
 msgstr ""
 
-#: includes/settings-ui.php:17
-msgid "Clean <head> output"
+#: includes/settings-ui.php:7
+msgid "WP Performance and Optimizer"
 msgstr ""
 
-#: includes/settings-ui.php:23
+#: includes/settings-ui.php:13
+msgid "Clean &lt;head&gt; output"
+msgstr ""
+
+#: includes/settings-ui.php:19
 msgid "Disable features"
 msgstr ""
 
-#: includes/settings-ui.php:29
+#: includes/settings-ui.php:25
 msgid "System configuration (wp-config.php)"
 msgstr ""

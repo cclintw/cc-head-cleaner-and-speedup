@@ -6,8 +6,8 @@
 // Add a submenu item under "Settings"
 function ccpo_add_settings_page() {
     add_options_page(
-        __( 'WP Performance Optimizer Settings', 'cc-performance-optimizer' ),
-        __( 'Performance Optimizer', 'cc-performance-optimizer' ),
+        __( 'Site Cleaner & Speed Up', 'cc-performance-optimizer' ),
+        __( 'Site Cleanup', 'cc-performance-optimizer' ),
         'manage_options',
         'ccpo-settings',
         'ccpo_render_settings_page'
