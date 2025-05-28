@@ -6,8 +6,8 @@
 // Add a submenu item under "Settings"
 function ccpo_add_settings_page() {
     add_options_page(
-        __( 'Site Cleaner & Speed Up', 'cc-performance-optimizer' ),
-        __( 'Site Cleanup', 'cc-performance-optimizer' ),
+        __( 'Site Cleaner & Speed Up', 'cc-head-cleaner-and-speedup' ),
+        __( 'Site Cleanup', 'cc-head-cleaner-and-speedup' ),
         'manage_options',
         'ccpo-settings',
         'ccpo_render_settings_page'
