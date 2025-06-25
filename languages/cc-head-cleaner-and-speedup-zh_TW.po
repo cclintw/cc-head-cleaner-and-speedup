@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: CC Head Cleaner & Speed Up 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cc-head-cleaner-and-speedup\n"
 "POT-Creation-Date: 2025-06-25T02:52:17+00:00\n"
-"PO-Revision-Date: 2025-06-25 12:52+0800\n"
+"PO-Revision-Date: 2025-06-25 14:51+0800\n"
 "Last-Translator: Chance Lin <chance@chancedemacbook-air.local>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -22,13 +22,13 @@ msgstr "CC Head Cleaner & Speed Up"
 
 #. Description of the plugin
 #: cc-head-cleaner-and-speedup.php
-msgid "Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary <meta>, <link>, <style>, and <script> tags from your site's <head> and disable unused WordPress features"
+msgid "Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary meta, link, style, and script tags from your site's head and disable unused WordPress features"
 msgstr "讓您的 WordPress 網站更快速、更乾淨！此外掛可輕鬆移除頁面 <head> 區域中不必要的 meta、link、css、script 標籤，並停用不需要的功能"
 
 #. Author of the plugin
 #: cc-head-cleaner-and-speedup.php
 msgid "Chance Lin"
-msgstr "Chance Lin"
+msgstr "C.C. Lin"
 
 #. Author URI of the plugin
 #: cc-head-cleaner-and-speedup.php
@@ -244,20 +244,20 @@ msgid "Prevents storing multiple post revisions."
 msgstr "防止系統儲存多個文章修訂版本。"
 
 #: includes/settings-data.php:178
-msgid "Set Trash Retention to 7 Days"
-msgstr "設定回收桶保留 7 天"
+msgid "Disable Trash"
+msgstr "停用垃圾桶"
 
 #: includes/settings-data.php:179
-msgid "Automatically deletes trashed content after 7 days."
-msgstr "自動刪除超過 7 天的回收桶內容。"
+msgid "Permanently deletes content immediately without moving to Trash."
+msgstr "刪除內容時不經垃圾桶，立即永久刪除。"
 
 #: includes/settings-data.php:183
-msgid "Adjust Autosave Interval (300 seconds)"
-msgstr "調整自動存檔間隔（300 秒）"
+msgid "Disable Autosave"
+msgstr "停用自動存檔"
 
 #: includes/settings-data.php:184
-msgid "Reduces autosave frequency to lower server load."
-msgstr "降低自動存檔頻率以減輕伺服器負擔。"
+msgid "Effectively disables WordPress autosave to reduce background requests."
+msgstr "實質上停用自動存檔，減少背景請求與伺服器負擔。"
 
 #: includes/settings-data.php:188
 msgid "Increase PHP Memory Limits"
@@ -279,7 +279,7 @@ msgstr "停用 WP Cron（請改用系統排程）"
 
 #: includes/settings-data.php:194
 msgid "Disables WordPress cron jobs, requires real server-side cron."
-msgstr "停用 WordPress 假排程，需改用伺服器系統排程。"
+msgstr "停用 WordPress 假手目排程，需改用伺服器系統排程。"
 
 #: includes/settings-page.php:9
 msgid "Site Cleaner & Speed Up"
@@ -291,11 +291,11 @@ msgstr "網站清理"
 
 #: includes/settings-ui.php:16
 msgid "Site Head Cleaner & Speed Up"
-msgstr "網站 <head> 清理與加速"
+msgstr "網站 head 清理與加速"
 
 #: includes/settings-ui.php:25
-msgid "Clean <head> output"
-msgstr "清理 <head> 輸出"
+msgid "Clean head output"
+msgstr "清理 head 輸出"
 
 #: includes/settings-ui.php:31
 msgid "Disable features"

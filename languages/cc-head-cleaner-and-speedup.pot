@@ -21,7 +21,7 @@ msgstr ""
 
 #. Description of the plugin
 #: cc-head-cleaner-and-speedup.php
-msgid "Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary <meta>, <link>, <style>, and <script> tags from your site's <head> and disable unused WordPress features."
+msgid "Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary meta, link, style, and script tags from your site's head and disable unused WordPress features"
 msgstr ""
 
 #. Author of the plugin
@@ -239,19 +239,19 @@ msgid "Prevents storing multiple post revisions."
 msgstr ""
 
 #: includes/settings-data.php:178
-msgid "Set Trash Retention to 7 Days"
+msgid "Disable Trash"
 msgstr ""
 
 #: includes/settings-data.php:179
-msgid "Automatically deletes trashed content after 7 days."
+msgid "Permanently deletes content immediately without moving to Trash."
 msgstr ""
 
 #: includes/settings-data.php:183
-msgid "Adjust Autosave Interval (300 seconds)"
+msgid "Disable Autosave"
 msgstr ""
 
 #: includes/settings-data.php:184
-msgid "Reduces autosave frequency to lower server load."
+msgid "Effectively disables WordPress autosave to reduce background requests."
 msgstr ""
 
 #: includes/settings-data.php:188
@@ -286,7 +286,7 @@ msgid "Site Head Cleaner & Speed Up"
 msgstr ""
 
 #: includes/settings-ui.php:25
-msgid "Clean <head> output"
+msgid "Clean head output"
 msgstr ""
 
 #: includes/settings-ui.php:31

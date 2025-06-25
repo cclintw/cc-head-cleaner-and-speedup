@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Plugin Details</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.cc-modal { padding: 1rem; }
+.cc-body { display: flex; overflow: hidden; }
+.cc-tabs-container { width: 70%; overflow-y: auto; }
+.cc-sidebar { width: 30%; padding: 20px; border-left: 1px solid #ccc; background: #f6f7f7; font-size: 14px; }
+.cc-tabs { list-style: none; display: flex; padding: 0; margin: 0; border-bottom: 1px solid #ccc; background: #f1f1f1; }
+.cc-tabs li { font-size: 14px; cursor: pointer; padding: 10px 20px; color: #2271b1; }
+.cc-tabs li.active { background: #fff; font-weight: bold; margin-bottom: -1px; border: 1px solid #ccc; border-bottom: none; }
+.cc-tab-pane { display: none; }
+.cc-tab-pane.active { display: block; }
+.cc-tab-content { padding: 20px; }
+</style>
+</head>
+<body>
+
+<div class='cc-modal'>
+<div class='cc-header'><h2>cc-head-cleaner-and-speedup</h2></div>
+<div class='cc-body'>
+<div class='cc-tabs-container'>
+<ul class='cc-tabs'><li data-tab='description' class='active'>外掛說明</li><li data-tab='installation' class=''>安裝方式</li><li data-tab='faq' class=''>常見問題</li><li data-tab='screenshots' class=''>螢幕截圖</li><li data-tab='changelog' class=''>更新紀錄</li></ul><div class='cc-tab-content'><div id='tab-description' class='cc-tab-pane active'><p><strong>CC Head Cleaner &amp; Speed Up</strong> 可協助您輕鬆優化 WordPress 網站：</p>
+<ul>
+<li>清理網站 <code>&lt;head&gt;</code> 區域，移除多餘 meta、link、style、script 標籤</li>
+<li>停用未使用功能，例如 emoji、oEmbed、RSS 訂閱、Heartbeat API</li>
+<li>調整系統設定，如文章修訂、自動存檔間隔、記憶體上限</li>
+<li>移除或移動大型腳本（例如 jQuery）以提升速度</li>
+</ul>
+<p>所有設定皆可透過後台操作，無需撰寫程式碼。</p></div><div id='tab-installation' class='cc-tab-pane '><ol>
+<li>將外掛上傳至 <code>/wp-content/plugins/</code> 資料夾。</li>
+<li>透過後台「外掛」選單啟用。</li>
+<li>前往 <strong>設定 &gt; 網站清理</strong> 進行相關設定。</li>
+</ol></div><div id='tab-faq' class='cc-tab-pane '><p>= 啟用後是否會影響網站？ =
+大多數選項相當安全，但若移除關鍵腳本（如 jQuery），可能影響佈景主題或其他外掛，請務必測試。</p>
+<p>= 是否會修改 WordPress 核心檔案？ =
+僅有啟用「系統設定」功能時，外掛會寫入 <code>wp-config.php</code>，其他情況不會動到核心檔案。</p>
+<p>= 可以還原設定嗎？ =
+可以，停用選項後即恢復 WordPress 預設行為。</p></div><div id='tab-screenshots' class='cc-tab-pane '><ol>
+<li>簡潔易用的開關式設定介面。</li>
+</ol></div><div id='tab-changelog' class='cc-tab-pane '><p>= 1.0 =</p>
+<ul>
+<li>首次發佈，提供 head 清理、功能停用與系統設定功能。</li>
+</ul></div></div></div><div class='cc-sidebar'><p><strong>版本 : </strong>1.0</p><p><strong>作者 : </strong><a href='https://cclin.cc/' target='_blank' rel='noopener noreferrer'>cclin</a></p><p><strong>需要 WordPress 版本 : </strong>5.0</p><p><strong>測試相容版本 : </strong>6.5</p><p><strong>需要 PHP 版本 : </strong>7.0</p><p><strong>授權條款 : </strong>GPLv2 or later</p></div></div></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const tabs = document.querySelectorAll('.cc-tabs li');
+const panes = document.querySelectorAll('.cc-tab-pane');
+tabs.forEach(function(tab) {
+tab.addEventListener('click', function() {
+const target = tab.getAttribute('data-tab');
+tabs.forEach(t => t.classList.remove('active'));
+panes.forEach(p => p.classList.remove('active'));
+tab.classList.add('active');
+document.getElementById('tab-' + target).classList.add('active');
+});
+});
+});
+</script>
+
+</body>
+</html>

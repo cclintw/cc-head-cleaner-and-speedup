@@ -2,29 +2,33 @@
 /**
  * 使用 TB_iframe=true 載入外掛說明檔案 readme.txt
  * plugin_row_meta 載入範例:
- * $links[] = '<a href="' . plugins_url('includes/details-content.php', __FILE__) . '?TB_iframe=true&width=772&height=617" class="thickbox">View Details</a>';
-*/
+ * $links[] = '<a href="' . CCHCS_PLUGIN_URL . 'includes/details-content.php?TB_iframe=true&width=772&height=617" class="thickbox">View Details</a>';
+ */
 
 // 正確引入 WordPress 環境
 require_once dirname(__DIR__, 4) . '/wp-load.php';
-if (!defined('ABSPATH')) {
+
+if (! defined('ABSPATH')) {
     exit;
 }
 
-// file path
-$plugin_dir = dirname(__DIR__); // plugin dir
-$locale = get_locale();
-
-// check if zh_TW
-if ( $locale === 'zh_TW' && file_exists( $plugin_dir . '/readme-zh_TW.txt' ) ) {
-    $readme_path = $plugin_dir . '/readme-zh_TW.txt';
-} else {
-    $readme_path = $plugin_dir . '/readme.txt';
+if (! defined('CCHCS_PLUGIN_DIR') || ! defined('CCHCS_TEXT_DOMAIN') || ! defined('CCHCS_PLUGIN_NAME')) {
+    exit('外掛常數未正確定義');
 }
 
-$parsedown_path = __DIR__ . '/parsedown.php';
-// check file exist
-if (!file_exists($readme_path) || !file_exists($parsedown_path)) {
+// file path
+$plugin_dir = CCHCS_PLUGIN_DIR;
+$locale = get_locale();
+
+if ($locale === 'zh_TW' && file_exists($plugin_dir . 'readme-zh_TW.txt')) {
+    $readme_path = $plugin_dir . 'readme-zh_TW.txt';
+} else {
+    $readme_path = $plugin_dir . 'readme.txt';
+}
+
+$parsedown_path = $plugin_dir . 'includes/parsedown.php';
+
+if (! file_exists($readme_path) || ! file_exists($parsedown_path)) {
     wp_die('必要檔案遺失');
 }
 
@@ -41,42 +45,40 @@ preg_match_all('/^([^=:\n]+):\s*(.+)$/m', $readme_clean, $meta_matches, PREG_SET
 $header_meta = [];
 foreach ($meta_matches as $m) {
     $key = strtolower(trim($m[1]));
-    $header_meta[$key] = trim($m[2]);
+    $header_meta[ $key ] = trim($m[2]);
 }
 
 $plugin_info = [
-    __('Version', 'cc-simple-load-more-post') => $header_meta['stable tag'] ?? '',
-    __('Author', 'cc-simple-load-more-post') => $header_meta['contributors'] ?? '',
-    __('Requires WordPress', 'cc-simple-load-more-post') => $header_meta['requires at least'] ?? '',
-    __('Tested up to', 'cc-simple-load-more-post') => $header_meta['tested up to'] ?? '',
-    __('Requires PHP', 'cc-simple-load-more-post') => $header_meta['requires php'] ?? '',
-    __('License', 'cc-simple-load-more-post') => $header_meta['license'] ?? '',
+    __('Version', CCHCS_TEXT_DOMAIN)          => $header_meta['stable tag'] ?? '',
+    __('Author', CCHCS_TEXT_DOMAIN)           => $header_meta['contributors'] ?? '',
+    __('Requires WordPress', CCHCS_TEXT_DOMAIN) => $header_meta['requires at least'] ?? '',
+    __('Tested up to', CCHCS_TEXT_DOMAIN)     => $header_meta['tested up to'] ?? '',
+    __('Requires PHP', CCHCS_TEXT_DOMAIN)     => $header_meta['requires php'] ?? '',
+    __('License', CCHCS_TEXT_DOMAIN)          => $header_meta['license'] ?? '',
 ];
 
 // ───── 解析 Sections 區塊 ─────
 $section_alias = [
-    'description' => 'description',
-    'installation' => 'installation',
-    'frequently asked questions' => 'faq',
-    'screenshots' => 'screenshots',
-    'changelog' => 'changelog',
+    'description'                  => 'description',
+    'installation'                 => 'installation',
+    'frequently asked questions'   => 'faq',
+    'screenshots'                  => 'screenshots',
+    'changelog'                    => 'changelog',
 ];
 $tab_labels = [
-    'description' => __('Description', 'cc-simple-load-more-post'),
-    'installation' => __('Installation', 'cc-simple-load-more-post'),
-    'faq' => __('FAQ', 'cc-simple-load-more-post'),
-    'screenshots' => __('Screenshots', 'cc-simple-load-more-post'),
-    'changelog' => __('Changelog', 'cc-simple-load-more-post'),
+    'description'  => __('Description', CCHCS_TEXT_DOMAIN),
+    'installation' => __('Installation', CCHCS_TEXT_DOMAIN),
+    'faq'          => __('FAQ', CCHCS_TEXT_DOMAIN),
+    'screenshots'  => __('Screenshots', CCHCS_TEXT_DOMAIN),
+    'changelog'    => __('Changelog', CCHCS_TEXT_DOMAIN),
 ];
-
 $sections = [];
 preg_match_all('/^==\s*(.*?)\s*==\s*([\s\S]*?)(?=^==|\Z)/m', $readme_clean, $matches, PREG_SET_ORDER);
-
 foreach ($matches as $match) {
     $title_raw = strtolower(trim($match[1]));
-    $key = $section_alias[$title_raw] ?? $title_raw;
-    $markdown = trim($match[2]);
-    $sections[$key] = $parsedown->text($markdown);
+    $key       = $section_alias[ $title_raw ] ?? $title_raw;
+    $markdown  = trim($match[2]);
+    $sections[ $key ] = $parsedown->text($markdown);
 }
 ?>
 <!DOCTYPE html>
@@ -85,7 +87,7 @@ foreach ($matches as $match) {
 <head>
 	<meta charset="utf-8">
 	<title>
-		<?php esc_html_e('Plugin Details', 'cc-simple-load-more-post'); ?>
+		<?php esc_html_e('Plugin Details', CCHCS_TEXT_DOMAIN); ?>
 	</title>
 	<style>
 		body {
@@ -158,14 +160,13 @@ foreach ($matches as $match) {
 
 	<div class="cc-modal">
 		<div class="cc-header">
-			<h2><?php esc_html_e('CC Simple Load More Post', 'cc-simple-load-more-post'); ?>
-			</h2>
+			<h2><?php echo esc_html(CCHCS_PLUGIN_NAME); ?></h2>
 		</div>
 		<div class="cc-body">
 			<div class="cc-tabs-container">
 				<ul class="cc-tabs">
-					<?php foreach ($tab_labels as $key => $label): ?>
-					<?php if (!empty($sections[$key])): ?>
+					<?php foreach ($tab_labels as $key => $label) : ?>
+					<?php if (! empty($sections[ $key ])) : ?>
 					<li data-tab="<?php echo esc_attr($key); ?>"
 						class="<?php echo $key === 'description' ? 'active' : ''; ?>">
 						<?php echo esc_html($label); ?>
@@ -174,15 +175,11 @@ foreach ($matches as $match) {
 					<?php endforeach; ?>
 				</ul>
 				<div class="cc-tab-content">
-					<?php foreach ($tab_labels as $key => $label): ?>
-					<?php if (!empty($sections[$key])): ?>
+					<?php foreach ($tab_labels as $key => $label) : ?>
+					<?php if (! empty($sections[ $key ])) : ?>
 					<div id="tab-<?php echo esc_attr($key); ?>"
 						class="cc-tab-pane <?php echo $key === 'description' ? 'active' : ''; ?>">
-						<?php
-                            $en_text = $sections[$key];
-					    $cleaned = preg_replace('/^\s*<p>(.*?)<\/p>\s*$/is', '$1', $en_text);
-					    echo wp_kses_post(translate($cleaned, 'cc-simple-load-more-post'));
-					    ?>
+						<?php echo wp_kses_post($sections[ $key ]); ?>
 					</div>
 					<?php endif; ?>
 					<?php endforeach; ?>
@@ -193,10 +190,10 @@ foreach ($matches as $match) {
             $author_uri = $header_meta['author uri'] ?? '';
 foreach ($plugin_info as $label => $value) {
     echo '<p><strong>' . esc_html($label) . ' : </strong>';
-    if ($label === __('Author', 'cc-simple-load-more-post') && !empty($author_uri)) {
+    if ($label === __('Author', CCHCS_TEXT_DOMAIN) && ! empty($author_uri)) {
         echo '<a href="' . esc_url($author_uri) . '" target="_blank" rel="noopener noreferrer">' . esc_html($value) . '</a>';
     } else {
-        echo esc_html__($value, 'cc-simple-load-more-post');
+        echo esc_html($value);
     }
     echo '</p>';
 }
