@@ -1,18 +1,27 @@
 <?php
 /**
- * Inject selected configuration constants into wp-config.php on plugin activation.
+ * Inject configuration constants into wp-config.php on plugin activation
  */
 
-function ccpo_write_wp_config_on_activation() {
-    $options = get_option( 'wdo_settings' );
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Prevent direct access.
+}
+
+/**
+ * Write selected constants into wp-config.php based on settings
+ * Runs automatically when plugin is activated
+ */
+function cchcs_write_wp_config_on_activation() {
+
+    $options = get_option( 'cchcs_settings' );
     $config_path = ABSPATH . 'wp-config.php';
 
-    // Abort if config file is not writable
+    // Abort if wp-config.php is not writable
     if ( ! is_writable( $config_path ) ) {
         return;
     }
 
-    // Read current wp-config.php
+    // Read current wp-config.php content
     $content = file_get_contents( $config_path );
     if ( $content === false ) {
         return;
@@ -21,6 +30,7 @@ function ccpo_write_wp_config_on_activation() {
     $marker = "/* That's all, stop editing! Happy publishing. */";
     $defines = [];
 
+    // Build defines list based on enabled settings
     if ( ! empty( $options['define_revisions'] ) ) {
         $defines[] = "define('WP_POST_REVISIONS', false);";
     }
@@ -38,13 +48,13 @@ function ccpo_write_wp_config_on_activation() {
         $defines[] = "define('DISABLE_WP_CRON', true);";
     }
 
-    // Inject defines before the marker if not already present
+    // Append defines before marker if not already present
     foreach ( $defines as $line ) {
         if ( strpos( $content, $line ) === false ) {
             $content = str_replace( $marker, "$line\n$marker", $content );
         }
     }
 
-    // Save updated config
+    // Save modified wp-config.php
     file_put_contents( $config_path, $content );
 }

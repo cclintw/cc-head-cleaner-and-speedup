@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: CC Head Cleaner & Speed Up
- * Description: Make your WordPress website faster and cleaner! This plugin makes it easy to remove unnecessary code—including meta, link, css, and script tags—from the <head> section of your page source, and to disable features you don’t need
+ * Description: Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary <meta>, <link>, <style>, and <script> tags from your site's <head> and disable unused WordPress features
  * Version: 1.0
  * Author: Chance Lin
  * Author URI: https://cclin.cc/
@@ -12,42 +12,49 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+    exit; // Prevent direct access.
 }
 
 // Define plugin directory path constant
-define( 'CCPO_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'CCHCS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-function cc_head_cleaner_and_speedup() {
-    load_plugin_textdomain(
-        'cc-head-cleaner-and-speedup',
-        false,
-        dirname(plugin_basename(__FILE__)) . '/languages'
-    );
+/**
+ * Load plugin translation files
+ */
+function cchcs_load_textdomain() {
+    load_plugin_textdomain( 'cc-head-cleaner-and-speedup', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
-add_action('plugins_loaded', 'cc_head_cleaner_and_speedup');
+add_action( 'plugins_loaded', 'cchcs_load_textdomain' );
 
-add_filter('plugin_row_meta', 'ccpo_plugin_row_meta', 10, 2);
-
-function ccpo_plugin_row_meta($meta, $plugin_file) {
-    if ($plugin_file === plugin_basename(__FILE__)) {
-       // $meta[] = __('Update Pro', 'cc-head-cleaner-and-speedup');
-        $meta[] = '<a href="#">' . esc_html__('View Details', 'cc-head-cleaner-and-speedup') . '</a>';
+/**
+ * Add custom link to plugin row meta
+ */
+function cchcs_plugin_row_meta( $meta, $plugin_file ) {
+    if ( $plugin_file === plugin_basename( __FILE__ ) ) {
+         //TB_iframe
+        $meta[] = '<a href="' . plugins_url('includes/details-content-txt.php', __FILE__) . '?TB_iframe=true&width=772&height=617" class="thickbox">' . esc_html__('View Details', 'cc-head-cleaner-and-speedup') . '</a>';
     }
     return $meta;
 }
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), function($links) {
-    $settings = '<a href="' . admin_url('admin.php?page=ccpo-settings') . '">Settings</a>';
-    //$github = '<a href="https://github.com/yourname/yourplugin" target="_blank">GitHub</a>';
-    //array_unshift($links, $settings);//此行是加到最左邊
+add_filter( 'plugin_row_meta', 'cchcs_plugin_row_meta', 10, 2 );
+
+/**
+ * Add settings link to plugin action links
+ */
+
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), function( $links ) {
+    $settings = '<a href="' . admin_url( 'admin.php?page=ccpo-settings' ) . '">' . __( 'Settings','cc-head-cleaner-and-speedup' ) . '</a>';
     $links[] = $settings;
-   // $links[] = $github;
     return $links;
 });
 
-// Load plugin core files
-require_once CCPO_PLUGIN_DIR . 'includes/settings-page.php';
-require_once CCPO_PLUGIN_DIR . 'includes/head-cleanup.php';
-require_once CCPO_PLUGIN_DIR . 'includes/feature-toggle.php';
-require_once CCPO_PLUGIN_DIR . 'includes/config-writer.php';
+// Include core files with proper validation
+require_once CCHCS_PLUGIN_DIR . 'includes/settings-page.php';
+require_once CCHCS_PLUGIN_DIR . 'includes/head-cleanup.php';
+require_once CCHCS_PLUGIN_DIR . 'includes/feature-toggle.php';
+require_once CCHCS_PLUGIN_DIR . 'includes/config-writer.php';
 
+/**
+ * Ensure wp-config.php updates run on plugin activation
+ */
+register_activation_hook( __FILE__, 'cchcs_write_wp_config_on_activation' );

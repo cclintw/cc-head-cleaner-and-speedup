@@ -1,0 +1,298 @@
+# Copyright (C) 2025 Chance Lin
+# This file is distributed under the GPL2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: CC Head Cleaner & Speed Up 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cc-head-cleaner-and-speedup\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-06-25T04:34:12+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: cc-head-cleaner-and-speedup\n"
+
+#. Plugin Name of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "CC Head Cleaner & Speed Up"
+msgstr ""
+
+#. Description of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary <meta>, <link>, <style>, and <script> tags from your site's <head> and disable unused WordPress features."
+msgstr ""
+
+#. Author of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "Chance Lin"
+msgstr ""
+
+#. Author URI of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "https://cclin.cc/"
+msgstr ""
+
+#: cc-head-cleaner-and-speedup.php:46
+msgid "Settings"
+msgstr ""
+
+#: includes/settings-data.php:19
+msgid "Notes"
+msgstr ""
+
+#: includes/settings-data.php:46
+msgid "Remove"
+msgstr ""
+
+#: includes/settings-data.php:47
+msgid "Disable"
+msgstr ""
+
+#: includes/settings-data.php:48
+msgid "Config"
+msgstr ""
+
+#: includes/settings-data.php:55
+msgid "Remove WP Generator Version"
+msgstr ""
+
+#: includes/settings-data.php:56
+msgid "Removes the WordPress version meta tag for improved security."
+msgstr ""
+
+#: includes/settings-data.php:60
+msgid "Remove Auto Sizes CSS Output"
+msgstr ""
+
+#: includes/settings-data.php:61
+msgid "Removes inline CSS for responsive images."
+msgstr ""
+
+#: includes/settings-data.php:65
+msgid "Remove RSD Link"
+msgstr ""
+
+#: includes/settings-data.php:66
+msgid "Removes Really Simple Discovery (RSD) link."
+msgstr ""
+
+#: includes/settings-data.php:70
+msgid "Remove WLW Manifest Link"
+msgstr ""
+
+#: includes/settings-data.php:71
+msgid "Removes Windows Live Writer manifest link."
+msgstr ""
+
+#: includes/settings-data.php:75
+msgid "Remove Shortlink"
+msgstr ""
+
+#: includes/settings-data.php:76
+msgid "Removes shortlink from <head> and HTTP headers."
+msgstr ""
+
+#: includes/settings-data.php:80
+msgid "Remove Feed Links"
+msgstr ""
+
+#: includes/settings-data.php:81
+msgid "Removes RSS feed link tags."
+msgstr ""
+
+#: includes/settings-data.php:85
+msgid "Remove REST API Link"
+msgstr ""
+
+#: includes/settings-data.php:86
+msgid "Removes REST API discovery link."
+msgstr ""
+
+#: includes/settings-data.php:90
+msgid "Remove oEmbed Discovery Links"
+msgstr ""
+
+#: includes/settings-data.php:91
+msgid "Removes oEmbed discovery links."
+msgstr ""
+
+#: includes/settings-data.php:95
+msgid "Remove Rel Prev/Next Links"
+msgstr ""
+
+#: includes/settings-data.php:96
+msgid "Removes adjacent posts relationship links."
+msgstr ""
+
+#: includes/settings-data.php:100
+msgid "Remove XFN Profile Link"
+msgstr ""
+
+#: includes/settings-data.php:101
+msgid "Removes rarely used XFN profile link."
+msgstr ""
+
+#: includes/settings-data.php:105
+msgid "Remove DNS Prefetch"
+msgstr ""
+
+#: includes/settings-data.php:106
+msgid "Removes DNS prefetch links."
+msgstr ""
+
+#: includes/settings-data.php:110
+msgid "Remove Emoji Output"
+msgstr ""
+
+#: includes/settings-data.php:111
+msgid "Removes emoji scripts and styles from <head>."
+msgstr ""
+
+#: includes/settings-data.php:115
+msgid "Remove Gutenberg Block CSS"
+msgstr ""
+
+#: includes/settings-data.php:116
+msgid "Removes block editor CSS from frontend."
+msgstr ""
+
+#: includes/settings-data.php:120
+msgid "Remove Gutenberg Theme Enhancements"
+msgstr ""
+
+#: includes/settings-data.php:121
+msgid "Removes wp-block-library-theme CSS."
+msgstr ""
+
+#: includes/settings-data.php:125
+msgid "Remove Global Styles Inline CSS"
+msgstr ""
+
+#: includes/settings-data.php:126
+msgid "Removes inline CSS generated from theme.json."
+msgstr ""
+
+#: includes/settings-data.php:130
+msgid "Remove Classic Theme Styles"
+msgstr ""
+
+#: includes/settings-data.php:131
+msgid "Removes default classic theme compatibility styles."
+msgstr ""
+
+#: includes/settings-data.php:139
+msgid "Disable Global Styles"
+msgstr ""
+
+#: includes/settings-data.php:140
+msgid "Completely disables global style sheets."
+msgstr ""
+
+#: includes/settings-data.php:144
+msgid "Disable Image Auto Sizes CSS"
+msgstr ""
+
+#: includes/settings-data.php:145
+msgid "Prevents automatic responsive image CSS."
+msgstr ""
+
+#: includes/settings-data.php:149
+msgid "Disable Block Editor"
+msgstr ""
+
+#: includes/settings-data.php:150
+msgid "Disables Gutenberg editor for posts and widgets."
+msgstr ""
+
+#: includes/settings-data.php:154
+msgid "Disable Emoji Scripts"
+msgstr ""
+
+#: includes/settings-data.php:155
+msgid "Removes all emoji-related functionality."
+msgstr ""
+
+#: includes/settings-data.php:159
+msgid "Disable oEmbed Support"
+msgstr ""
+
+#: includes/settings-data.php:160
+msgid "Disables oEmbed API routes."
+msgstr ""
+
+#: includes/settings-data.php:164
+msgid "Disable All RSS Feed Routes"
+msgstr ""
+
+#: includes/settings-data.php:165
+msgid "Completely disables RSS feeds."
+msgstr ""
+
+#: includes/settings-data.php:173
+msgid "Disable Post Revisions"
+msgstr ""
+
+#: includes/settings-data.php:174
+msgid "Prevents storing multiple post revisions."
+msgstr ""
+
+#: includes/settings-data.php:178
+msgid "Set Trash Retention to 7 Days"
+msgstr ""
+
+#: includes/settings-data.php:179
+msgid "Automatically deletes trashed content after 7 days."
+msgstr ""
+
+#: includes/settings-data.php:183
+msgid "Adjust Autosave Interval (300 seconds)"
+msgstr ""
+
+#: includes/settings-data.php:184
+msgid "Reduces autosave frequency to lower server load."
+msgstr ""
+
+#: includes/settings-data.php:188
+msgid "Increase PHP Memory Limits"
+msgstr ""
+
+#: includes/settings-data.php:189
+msgid ""
+"Raises memory limits for better performance.\n"
+"MEMORY_LIMIT:128M \n"
+"MAX_MEMORY_LIMIT:256M"
+msgstr ""
+
+#: includes/settings-data.php:193
+msgid "Disable WP Cron (use system cron)"
+msgstr ""
+
+#: includes/settings-data.php:194
+msgid "Disables WordPress cron jobs, requires real server-side cron."
+msgstr ""
+
+#: includes/settings-page.php:9
+msgid "Site Cleaner & Speed Up"
+msgstr ""
+
+#: includes/settings-page.php:10
+msgid "Site Cleanup"
+msgstr ""
+
+#: includes/settings-ui.php:16
+msgid "Site Head Cleaner & Speed Up"
+msgstr ""
+
+#: includes/settings-ui.php:25
+msgid "Clean <head> output"
+msgstr ""
+
+#: includes/settings-ui.php:31
+msgid "Disable features"
+msgstr ""
+
+#: includes/settings-ui.php:37
+msgid "System configuration (wp-config.php)"
+msgstr ""

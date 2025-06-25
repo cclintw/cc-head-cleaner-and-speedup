@@ -1,0 +1,306 @@
+# Copyright (C) 2025 Chance Lin
+# This file is distributed under the GPL2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: CC Head Cleaner & Speed Up 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cc-head-cleaner-and-speedup\n"
+"POT-Creation-Date: 2025-06-25T02:52:17+00:00\n"
+"PO-Revision-Date: 2025-06-25 12:52+0800\n"
+"Last-Translator: Chance Lin <chance@chancedemacbook-air.local>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: cc-head-cleaner-and-speedup\n"
+
+#. Plugin Name of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "CC Head Cleaner & Speed Up"
+msgstr "CC Head Cleaner & Speed Up"
+
+#. Description of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary <meta>, <link>, <style>, and <script> tags from your site's <head> and disable unused WordPress features"
+msgstr "讓您的 WordPress 網站更快速、更乾淨！此外掛可輕鬆移除頁面 <head> 區域中不必要的 meta、link、css、script 標籤，並停用不需要的功能"
+
+#. Author of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "Chance Lin"
+msgstr "Chance Lin"
+
+#. Author URI of the plugin
+#: cc-head-cleaner-and-speedup.php
+msgid "https://cclin.cc/"
+msgstr "https://cclin.cc/"
+
+#: cc-head-cleaner-and-speedup.php:38
+msgid "View Details"
+msgstr "檢視詳細資訊"
+
+#: cc-head-cleaner-and-speedup.php:44
+msgid "Settings"
+msgstr "設定"
+
+#: includes/settings-data.php:19
+msgid "Notes"
+msgstr "說明"
+
+#: includes/settings-data.php:46
+msgid "Remove"
+msgstr "移除"
+
+#: includes/settings-data.php:47
+msgid "Disable"
+msgstr "停用"
+
+#: includes/settings-data.php:48
+msgid "Config"
+msgstr "系統設定"
+
+#: includes/settings-data.php:55
+msgid "Remove WP Generator Version"
+msgstr "移除 WordPress 版本資訊"
+
+#: includes/settings-data.php:56
+msgid "Removes the WordPress version meta tag for improved security."
+msgstr "移除 WordPress 版本標籤以提升安全性。"
+
+#: includes/settings-data.php:60
+msgid "Remove Auto Sizes CSS Output"
+msgstr "移除自動尺寸 CSS"
+
+#: includes/settings-data.php:61
+msgid "Removes inline CSS for responsive images."
+msgstr "移除響應式圖片的內嵌 CSS 樣式。"
+
+#: includes/settings-data.php:65
+msgid "Remove RSD Link"
+msgstr "移除 RSD 連結"
+
+#: includes/settings-data.php:66
+msgid "Removes Really Simple Discovery (RSD) link."
+msgstr "移除 Really Simple Discovery (RSD) 探索連結。"
+
+#: includes/settings-data.php:70
+msgid "Remove WLW Manifest Link"
+msgstr "移除 WLW 設定檔連結"
+
+#: includes/settings-data.php:71
+msgid "Removes Windows Live Writer manifest link."
+msgstr "移除 Windows Live Writer 設定檔連結。"
+
+#: includes/settings-data.php:75
+msgid "Remove Shortlink"
+msgstr "移除短網址"
+
+#: includes/settings-data.php:76
+msgid "Removes shortlink from <head> and HTTP headers."
+msgstr "從 <head> 及 HTTP 標頭移除短網址。"
+
+#: includes/settings-data.php:80
+msgid "Remove Feed Links"
+msgstr "移除 RSS 訂閱連結"
+
+#: includes/settings-data.php:81
+msgid "Removes RSS feed link tags."
+msgstr "移除 RSS 訂閱連結標籤。"
+
+#: includes/settings-data.php:85
+msgid "Remove REST API Link"
+msgstr "移除 REST API 連結"
+
+#: includes/settings-data.php:86
+msgid "Removes REST API discovery link."
+msgstr "移除 REST API 探索連結。"
+
+#: includes/settings-data.php:90
+msgid "Remove oEmbed Discovery Links"
+msgstr "移除 oEmbed 探索連結"
+
+#: includes/settings-data.php:91
+msgid "Removes oEmbed discovery links."
+msgstr "移除 oEmbed 探索連結。"
+
+#: includes/settings-data.php:95
+msgid "Remove Rel Prev/Next Links"
+msgstr "移除前後文章連結"
+
+#: includes/settings-data.php:96
+msgid "Removes adjacent posts relationship links."
+msgstr "移除相鄰文章的前後連結。"
+
+#: includes/settings-data.php:100
+msgid "Remove XFN Profile Link"
+msgstr "移除 XFN 個人檔案連結"
+
+#: includes/settings-data.php:101
+msgid "Removes rarely used XFN profile link."
+msgstr "移除較少使用的 XFN 個人檔案連結。"
+
+#: includes/settings-data.php:105
+msgid "Remove DNS Prefetch"
+msgstr "移除 DNS 預先解析"
+
+#: includes/settings-data.php:106
+msgid "Removes DNS prefetch links."
+msgstr "移除 DNS 預先解析連結。"
+
+#: includes/settings-data.php:110
+msgid "Remove Emoji Output"
+msgstr "移除 Emoji 輸出"
+
+#: includes/settings-data.php:111
+msgid "Removes emoji scripts and styles from <head>."
+msgstr "從 <head> 區塊移除 emoji 腳本與樣式。"
+
+#: includes/settings-data.php:115
+msgid "Remove Gutenberg Block CSS"
+msgstr "移除 Gutenberg 區塊 CSS"
+
+#: includes/settings-data.php:116
+msgid "Removes block editor CSS from frontend."
+msgstr "從前台移除區塊編輯器的 CSS 樣式。"
+
+#: includes/settings-data.php:120
+msgid "Remove Gutenberg Theme Enhancements"
+msgstr "移除 Gutenberg 佈景增強樣式"
+
+#: includes/settings-data.php:121
+msgid "Removes wp-block-library-theme CSS."
+msgstr "移除 wp-block-library-theme CSS。"
+
+#: includes/settings-data.php:125
+msgid "Remove Global Styles Inline CSS"
+msgstr "移除全域樣式內嵌 CSS"
+
+#: includes/settings-data.php:126
+msgid "Removes inline CSS generated from theme.json."
+msgstr "移除 theme.json 生成的內嵌 CSS。"
+
+#: includes/settings-data.php:130
+msgid "Remove Classic Theme Styles"
+msgstr "移除傳統佈景樣式"
+
+#: includes/settings-data.php:131
+msgid "Removes default classic theme compatibility styles."
+msgstr "移除傳統佈景相容性樣式。"
+
+#: includes/settings-data.php:139
+msgid "Disable Global Styles"
+msgstr "停用全域樣式"
+
+#: includes/settings-data.php:140
+msgid "Completely disables global style sheets."
+msgstr "完全停用全域樣式表。"
+
+#: includes/settings-data.php:144
+msgid "Disable Image Auto Sizes CSS"
+msgstr "停用圖片自動尺寸 CSS"
+
+#: includes/settings-data.php:145
+msgid "Prevents automatic responsive image CSS."
+msgstr "防止自動生成的響應式圖片 CSS。"
+
+#: includes/settings-data.php:149
+msgid "Disable Block Editor"
+msgstr "停用區塊編輯器"
+
+#: includes/settings-data.php:150
+msgid "Disables Gutenberg editor for posts and widgets."
+msgstr "停用文章與小工具的 Gutenberg 區塊編輯器。"
+
+#: includes/settings-data.php:154
+msgid "Disable Emoji Scripts"
+msgstr "停用 Emoji 腳本"
+
+#: includes/settings-data.php:155
+msgid "Removes all emoji-related functionality."
+msgstr "移除所有 Emoji 相關功能。"
+
+#: includes/settings-data.php:159
+msgid "Disable oEmbed Support"
+msgstr "停用 oEmbed 支援"
+
+#: includes/settings-data.php:160
+msgid "Disables oEmbed API routes."
+msgstr "停用 oEmbed API 路徑。"
+
+#: includes/settings-data.php:164
+msgid "Disable All RSS Feed Routes"
+msgstr "停用所有 RSS 訂閱路徑"
+
+#: includes/settings-data.php:165
+msgid "Completely disables RSS feeds."
+msgstr "完全停用 RSS 訂閱功能。"
+
+#: includes/settings-data.php:173
+msgid "Disable Post Revisions"
+msgstr "停用文章修訂版本"
+
+#: includes/settings-data.php:174
+msgid "Prevents storing multiple post revisions."
+msgstr "防止系統儲存多個文章修訂版本。"
+
+#: includes/settings-data.php:178
+msgid "Set Trash Retention to 7 Days"
+msgstr "設定回收桶保留 7 天"
+
+#: includes/settings-data.php:179
+msgid "Automatically deletes trashed content after 7 days."
+msgstr "自動刪除超過 7 天的回收桶內容。"
+
+#: includes/settings-data.php:183
+msgid "Adjust Autosave Interval (300 seconds)"
+msgstr "調整自動存檔間隔（300 秒）"
+
+#: includes/settings-data.php:184
+msgid "Reduces autosave frequency to lower server load."
+msgstr "降低自動存檔頻率以減輕伺服器負擔。"
+
+#: includes/settings-data.php:188
+msgid "Increase PHP Memory Limits"
+msgstr "提升 PHP 記憶體上限"
+
+#: includes/settings-data.php:189
+msgid ""
+"Raises memory limits for better performance.\n"
+"MEMORY_LIMIT:128M \n"
+"MAX_MEMORY_LIMIT:256M"
+msgstr ""
+"提高記憶體上限以提升效能。\n"
+"MEMORY_LIMIT: 128M\n"
+"MAX_MEMORY_LIMIT: 256M"
+
+#: includes/settings-data.php:193
+msgid "Disable WP Cron (use system cron)"
+msgstr "停用 WP Cron（請改用系統排程）"
+
+#: includes/settings-data.php:194
+msgid "Disables WordPress cron jobs, requires real server-side cron."
+msgstr "停用 WordPress 假排程，需改用伺服器系統排程。"
+
+#: includes/settings-page.php:9
+msgid "Site Cleaner & Speed Up"
+msgstr "網站清理與加速"
+
+#: includes/settings-page.php:10
+msgid "Site Cleanup"
+msgstr "網站清理"
+
+#: includes/settings-ui.php:16
+msgid "Site Head Cleaner & Speed Up"
+msgstr "網站 <head> 清理與加速"
+
+#: includes/settings-ui.php:25
+msgid "Clean <head> output"
+msgstr "清理 <head> 輸出"
+
+#: includes/settings-ui.php:31
+msgid "Disable features"
+msgstr "停用功能"
+
+#: includes/settings-ui.php:37
+msgid "System configuration (wp-config.php)"
+msgstr "系統設定（wp-config.php）"

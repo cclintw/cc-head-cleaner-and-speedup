@@ -1,29 +1,38 @@
-# cc-wp-deploy-optimizer
+# CC Head Cleaner & Speed Up
 
-# CC Performance and Optimizer
+**Make your WordPress site faster and cleaner!**
 
-A WordPress plugin that helps optimize the `<head>` section of your site by removing unnecessary scripts, styles, meta tags, and other default WordPress outputs. This improves loading performance and gives full control over front-end behavior.
+This plugin lets you:
+
+- Remove unnecessary `<meta>`, `<link>`, `<style>`, and `<script>` tags from your site's `<head>`
+- Disable unused WordPress features (emojis, oEmbed, feeds, etc.)
+- Optimize system performance with optional `wp-config.php` tweaks
+- Move or remove heavy scripts like jQuery
+- All settings managed via an easy-to-use admin interface
 
 ## Features
 
-- Disable emoji scripts and styles
-- Remove REST API and oEmbed links
-- Remove generator meta tag, shortlink, feed links
-- Disable admin-bar styles and JS in frontend
-- Lightweight and easy to use
-- No external dependencies
+Clean `<head>` output  
+Disable bloat like Emoji scripts  
+Remove default feeds  
+Optional system-level tweaks (autosave, revisions, memory limits)  
+Lightweight, no third-party dependencies  
 
 ## Installation
 
-1. Upload the plugin folder to `/wp-content/plugins/cc-preformance`
-2. Activate the plugin via the WordPress admin
-3. Configure under `Settings > CC Performance` (if available)
+1. Upload to `/wp-content/plugins/`
+2. Activate in the WordPress admin
+3. Visit **Settings → Site Cleanup** to configure
 
-## Requirements
+## Screenshots
 
-- WordPress 5.0+
-- PHP 7.2 or higher
+![Settings Interface](https://your-site.com/screenshot.png)
 
 ## License
 
-MIT
+GPLv2 or later  
+[https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+
+## Author
+
+[Chance Lin](https://cclin.cc/)

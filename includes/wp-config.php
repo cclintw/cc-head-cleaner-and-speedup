@@ -23,7 +23,7 @@ $group_config = [
     [
         'id'    => 'define_memory_limit',
         'label' => __( 'Increase memory limits', 'cc-head-cleaner-and-speedup' ),
-        'desc'  => __( 'Prevent memory errors when editing images or running plugins.', 'cc-head-cleaner-and-speedup' ),
+        'desc'  => __( 'Prevent memory errors when editing images or running plugins.\n MEMORY_LIMIT:128M, MAX_MEMORY_LIMIT:256M', 'cc-head-cleaner-and-speedup' ),
         'html'  => 'define("WP_MEMORY_LIMIT", "128M");' . "\n" . 'define("WP_MAX_MEMORY_LIMIT", "256M");',
         'hook'  => 'wp-config.php',
     ],

@@ -1,24 +1,29 @@
 <?php
 /**
- * Conditionally remove WordPress default features to optimize performance.
+ * Conditionally disable WordPress features based on settings to optimize performance
  */
 
-add_action( 'init', function () {
-    $opt = get_option( 'wdo_settings' );
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Prevent direct access.
+}
 
-    // Remove Global Styles
+add_action( 'init', function () {
+
+    $opt = get_option( 'cchcs_settings' );
+
+    // Disable Global Styles
     if ( ! empty( $opt['disable_global_styles'] ) ) {
         add_action( 'wp_enqueue_scripts', function () {
             wp_dequeue_style( 'global-styles' );
         }, 100 );
     }
 
-    // Disable auto-sizes CSS in images
+    // Disable auto-sizes CSS for images
     if ( ! empty( $opt['disable_auto_sizes_css'] ) ) {
         add_filter( 'wp_img_tag_add_auto_sizes', '__return_false' );
     }
 
-    // Remove Classic Theme Styles
+    // Remove classic theme compatibility styles
     if ( ! empty( $opt['remove_classic_theme_styles'] ) ) {
         add_action( 'wp_enqueue_scripts', function () {
             wp_dequeue_style( 'classic-theme-styles' );
@@ -34,13 +39,13 @@ add_action( 'init', function () {
         }, 100 );
     }
 
-    // Disable Block Editor
+    // Disable block editor for posts and widgets
     if ( ! empty( $opt['disable_block_editor'] ) ) {
         add_filter( 'use_block_editor_for_post', '__return_false' );
         add_filter( 'use_widgets_block_editor', '__return_false' );
     }
 
-    // Disable Emoji
+    // Disable all Emoji-related features
     if ( ! empty( $opt['disable_emoji_support'] ) ) {
         remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
         remove_action( 'admin_print_styles', 'print_emoji_styles' );
@@ -53,13 +58,13 @@ add_action( 'init', function () {
         remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
     }
 
-    // Disable oEmbed route
+    // Disable oEmbed routes
     if ( ! empty( $opt['disable_oembed_route'] ) ) {
         remove_action( 'rest_api_init', 'wp_oembed_register_route' );
         add_filter( 'oembed_response_data', '__return_null' );
     }
 
-    // Disable all feeds
+    // Completely disable all RSS feeds with redirect
     if ( ! empty( $opt['disable_all_feeds'] ) ) {
         $disable_feeds = function () {
             wp_redirect( home_url() );
@@ -79,55 +84,9 @@ add_action( 'init', function () {
         }
     }
 
-    // Remove selected widgets
-    if ( ! empty( $opt['remove_widgets'] ) ) {
-        add_action( 'widgets_init', function () {
-            unregister_widget( 'WP_Widget_RSS' );
-            unregister_widget( 'WP_Widget_Meta' );
-        }, 11 );
-    }
-
-    // Remove heartbeat script
-    if ( ! empty( $opt['remove_heartbeat'] ) ) {
-        wp_deregister_script( 'heartbeat' );
-    }
-
-    // Remove autosave
-    if ( ! empty( $opt['remove_autosave'] ) ) {
-        add_action( 'wp_print_scripts', function () {
-            wp_deregister_script( 'autosave' );
-        } );
-    }
-
-    // Move jQuery to footer
-    if ( ! empty( $opt['move_jquery_to_footer'] ) ) {
-        add_action( 'wp_enqueue_scripts', function () {
-            wp_scripts()->add_data( 'jquery', 'group', 1 );
-        }, 100 );
-    }
-
-    // Disable RSS feed with error message
-    if ( ! empty( $opt['disable_rss_feed'] ) ) {
-        $rss_hooks = [
-            'do_feed',
-            'do_feed_rdf',
-            'do_feed_rss',
-            'do_feed_rss2',
-            'do_feed_atom',
-            'do_feed_rss2_comments',
-            'do_feed_atom_comments',
-        ];
-        foreach ( $rss_hooks as $hook ) {
-            add_action( $hook, function () {
-                wp_die(
-                    esc_html__( 'RSS feed is disabled. Please return to the homepage.', 'cc-performance-optimizer' )
-                );
-            } );
-        }
-    }
-
-    // Frontend-only optimizations
+    // Frontend-only performance tweaks
     if ( ! is_admin() ) {
+
         if ( ! empty( $opt['remove_jquery'] ) ) {
             add_action( 'wp_enqueue_scripts', function () {
                 wp_deregister_script( 'jquery' );
@@ -180,4 +139,12 @@ add_action( 'init', function () {
             }, 100 );
         }
     }
-} );
+
+    // Move jQuery to footer for faster first render
+    if ( ! empty( $opt['move_jquery_to_footer'] ) ) {
+        add_action( 'wp_enqueue_scripts', function () {
+            wp_scripts()->add_data( 'jquery', 'group', 1 );
+        }, 100 );
+    }
+
+});

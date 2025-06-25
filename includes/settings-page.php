@@ -4,20 +4,20 @@
  */
 
 // Add a submenu item under "Settings"
-function ccpo_add_settings_page() {
+function cchcs_add_settings_page() {
     add_options_page(
         __( 'Site Cleaner & Speed Up', 'cc-head-cleaner-and-speedup' ),
         __( 'Site Cleanup', 'cc-head-cleaner-and-speedup' ),
         'manage_options',
         'ccpo-settings',
-        'ccpo_render_settings_page'
+        'cchcs_render_settings_page'
     );
 }
-add_action( 'admin_menu', 'ccpo_add_settings_page' );
+add_action( 'admin_menu', 'cchcs_add_settings_page' );
 
 // Render the actual settings UI
-function ccpo_render_settings_page() {
-    include CCPO_PLUGIN_DIR . 'includes/settings-ui.php';
+function cchcs_render_settings_page() {
+    include CCHCS_PLUGIN_DIR . 'includes/settings-ui.php';
 }
 
 // Register plugin settings

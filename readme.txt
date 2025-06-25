@@ -1,45 +1,58 @@
-=== WDO Plugin ===
-Contributors: yourusername
-Tags: optimization, performance, security
+=== CC Head Cleaner & Speed Up ===
+Contributors: cclin
+Author URI: https://cclin.cc/
+Tags: performance, head cleanup, disable features, speed up, optimization, remove meta, remove scripts
 Requires at least: 5.0
 Tested up to: 6.5
+Requires PHP: 7.0
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-一個用於優化 WordPress 網站的外掛，提供多種功能以提升網站效能與安全性。
+Make your WordPress site faster and cleaner by removing unnecessary <head> elements and disabling unused features.
 
 == Description ==
 
-WDO Plugin 提供以下功能：
+**CC Head Cleaner & Speed Up** helps you easily optimize your WordPress site:
 
-* 移除不必要的 meta 標籤
-* 停用自動產生的 CSS
-* 移除不常用的腳本與樣式
-* 提供自訂設定選項
+- Remove unnecessary meta, link, style, and script tags from your site's `<head>`
+- Disable unused WordPress features (emoji, oEmbed, RSS feeds, Heartbeat API)
+- Fine-tune system settings like revisions, autosave interval, and memory limits
+- Move or remove heavy scripts like jQuery for faster load times
+
+All settings are accessible via a simple admin interface — no coding required.
 
 == Installation ==
 
-1. 下載並解壓縮外掛檔案。
-2. 將資料夾上傳至 `/wp-content/plugins/` 目錄。
-3. 在 WordPress 後台啟用外掛。
-4. 前往設定頁面進行相關設定。
-
-== Frequently Asked Questions ==
-
-= 此外掛是否與最新版本的 WordPress 相容？ =
-是的，WDO Plugin 已通過最新版本的 WordPress 測試。
+1. Upload the plugin folder to `/wp-content/plugins/`.
+2. Activate the plugin via the "Plugins" menu.
+3. Go to **Settings > Site Cleanup** to configure the options.
 
 == Screenshots ==
 
-1. 外掛設定頁面截圖
+1. Simple toggle-based admin settings screen.
+
+== Frequently Asked Questions ==
+
+= Will this break my site? =
+Most options are safe. However, removing critical scripts like jQuery may affect themes or other plugins. Test before deployment.
+
+= Does this modify core files? =
+Only system configuration options may write to `wp-config.php`.
+
+= Can I revert changes? =
+Yes, disabling options restores default WordPress behavior.
 
 == Changelog ==
 
 = 1.0 =
-* 初始版本發布。
+* Initial release with head cleanup, feature toggles, and system configuration settings.
 
 == Upgrade Notice ==
 
 = 1.0 =
-初始版本發布，建議所有使用者升級以獲得最佳體驗。
+Initial release, safely remove unnecessary head output and disable unused features to improve speed.
+
+== License ==
+
+This plugin is licensed under the GPLv2 or later.
