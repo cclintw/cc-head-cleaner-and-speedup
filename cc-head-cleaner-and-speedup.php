@@ -4,7 +4,7 @@
  * Description: Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary <meta>, <link>, <style>, and <script> tags from your site's <head> and disable unused WordPress features
  * Version: 1.0
  * Author: Chance Lin
- * Author URI: https://cclin.cc/
+ * Author URI: https://github.com/cclintw
  * Text Domain: cc-head-cleaner-and-speedup
  * Domain Path: /languages
  * License: GPL2+
