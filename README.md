@@ -35,4 +35,4 @@ GPLv2 or later
 
 ## Author
 
-[Chance Lin](https://cclin.cc/)
+[Chance Lin](https://github.com/cclintw)
