@@ -3,7 +3,7 @@
 /**
  * Plugin Name: CC Head Cleaner & Speed Up
  * Description: Make your WordPress website faster and cleaner! This plugin allows you to easily remove unnecessary meta, link, style, and script tags from your site's head and disable unused WordPress features
- * Version: 1.0.1
+ * Version: 1.0.3
  * Author: Chance Lin
  * Author URI: https://github.com/cclintw
  * Text Domain: cc-head-cleaner-and-speedup
@@ -15,7 +15,7 @@
  */
 
 
- if (! defined('ABSPATH')) {
+if (! defined('ABSPATH')) {
     exit; // Prevent direct access
 }
 

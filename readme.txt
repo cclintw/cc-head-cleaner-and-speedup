@@ -4,7 +4,7 @@ Tags: performance, head cleanup, disable features, speed up, optimization, remov
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 7.0
-Stable tag: 1.0.1
+Stable tag: 1.0.3
 Contributors: Chance Lin
 Donate link: https://www.paypal.me/chancelintw
 License: GPLv2 or later
@@ -48,6 +48,44 @@ Yes, disabling options restores default WordPress behavior.
 == Changelog ==
 
 
+
+#### 1.0.3 – 2025/06/27
+
+* version 1.0.3
+
+#### 1.0.3 – 2025/06/25
+
+* us parse-readme.sh to generate view-details.html file and view-dtails-zh_TW.html file,conditional display i18n html
+* ccpo-settings to cchcs-settings
+* delete compile-mo.sh
+* modify readme.md
+* change author url
+* add i18n language and plugin View Detail
+
+#### 1.0.3 – 2025/05/28
+
+* rename repo name
+
+#### 1.0.3 – 2025/05/25
+
+* rename plugin name
+
+#### 1.0.3 – 2025/05/24
+
+* i18n
+
+#### 1.0.3 – 2025/05/23
+
+* rename
+* modify
+* edit .gitignore
+* Remove .DS_Store from repository and update .gitignore
+* modify readme
+* Initial commit
+
+#### 1.0.1 – 2025/06/27
+
+* version 1.0.3
 
 #### 1.0.1 – 2025/06/25
 
