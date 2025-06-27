@@ -1,66 +1,114 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8'>
-<title>Plugin Details</title>
 <style>
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-.cc-modal { padding: 1rem; }
-.cc-body { display: flex; overflow: hidden; }
-.cc-tabs-container { width: 70%; overflow-y: auto; }
-.cc-sidebar { width: 30%; padding: 20px; border-left: 1px solid #ccc; background: #f6f7f7; font-size: 14px; }
-.cc-tabs { list-style: none; display: flex; padding: 0; margin: 0; border-bottom: 1px solid #ccc; background: #f1f1f1; }
-.cc-tabs li { font-size: 14px; cursor: pointer; padding: 10px 20px; color: #2271b1; }
-.cc-tabs li.active { background: #fff; font-weight: bold; margin-bottom: -1px; border: 1px solid #ccc; border-bottom: none; }
-.cc-tab-pane { display: none; }
-.cc-tab-pane.active { display: block; }
-.cc-tab-content { padding: 20px; }
-</style>
-</head>
-<body>
+    body{margin:0;font-size:14px;line-height:1.8;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;}
+    h3{font-size:16px;}
+    .CC_title{background: #f6f7f7;padding:1rem;}
+    .cc-sidebar{min-height:400px;font-size:13px;}
+    .cc-sidebar h3{font-weight:600;text-transform:uppercase;font-size:12px;color:#646970;margin:24px 0 8px;}.cc-sidebar a,.cc-sidebar a:link{font-size:13px;padding:0}
+    .cc-sidebar strong{color: #3c434a;}
+    li.active{margin:0 -1px -1px;background:#fff;border:1px solid #dcdcde;border-bottom-color:#fff;color:#2c3338 !important;}
+    ul.cc-tabs{display: flex;list-style: none;margin: 0;padding-left:1rem;gap:1rem;background: #f6f7f7;border-bottom:1px solid #dcdcde;}
+    .cc-tabs > li,a,a:link{color:#2271b1;font-size:14px;padding:5px 10px;cursor:pointer;}
+    </style><div class='CC_window' style='overflow:auto;'>
+<div class='CC_title'>
+    <div class='plugin-title'><h2>CC Head Cleaner &amp; Speed Up</h2></div>
+</div>
+<div class='ajaxContent' style='padding:0;'>
 
-<div class='cc-modal'>
-<div class='cc-header'><h2>cc-head-cleaner-and-speedup</h2></div>
-<div class='cc-body'>
-<div class='cc-tabs-container'>
-<ul class='cc-tabs'><li data-tab='description' class='active'>Description</li><li data-tab='installation' class=''>Installation</li><li data-tab='faq' class=''>FAQ</li><li data-tab='screenshots' class=''>Screenshots</li><li data-tab='changelog' class=''>Changelog</li></ul><div class='cc-tab-content'><div id='tab-description' class='cc-tab-pane active'><p><strong>CC Head Cleaner &amp; Speed Up</strong> helps you easily optimize your WordPress site:</p>
+<ul class='cc-tabs'><li data-tab='description' class='active'>Description</li><li data-tab='installation' class=''>Installation</li><li data-tab='faq' class=''>FAQ</li><li data-tab='screenshots' class=''>Screenshots</li><li data-tab='changelog' class=''>Changelog</li></ul>
+<div class='cc-body' style='display:flex;padding-left:1rem; gap:15px;'>
+
+<div class='cc-tab-content' style='width:70%;'><div id='tab-description' class='cc-tab-pane' ><p>helps you easily optimize your WordPress site:</p>
 <ul>
 <li>Remove unnecessary meta, link, style, and script tags from your site's <code>&lt;head&gt;</code></li>
 <li>Disable unused WordPress features (emoji, oEmbed, RSS feeds, Heartbeat API)</li>
 <li>Fine-tune system settings like revisions, autosave interval, and memory limits</li>
 <li>Move or remove heavy scripts like jQuery for faster load times</li>
 </ul>
-<p>All settings are accessible via a simple admin interface — no coding required.</p></div><div id='tab-installation' class='cc-tab-pane '><ol>
+<p>All settings are accessible via a simple admin interface — no coding required.</p></div><div id='tab-installation' class='cc-tab-pane' style='display:none;'><ol>
 <li>Upload the plugin folder to <code>/wp-content/plugins/</code>.</li>
 <li>Activate the plugin via the "Plugins" menu.</li>
 <li>Go to <strong>Settings &gt; Site Cleanup</strong> to configure the options.</li>
-</ol></div><div id='tab-faq' class='cc-tab-pane '><p>= Will this break my site? =
+</ol></div><div id='tab-faq' class='cc-tab-pane' style='display:none;'><p>= Will this break my site? =
 Most options are safe. However, removing critical scripts like jQuery may affect themes or other plugins. Test before deployment.</p>
 <p>= Does this modify core files? =
 Only system configuration options may write to <code>wp-config.php</code>.</p>
 <p>= Can I revert changes? =
-Yes, disabling options restores default WordPress behavior.</p></div><div id='tab-screenshots' class='cc-tab-pane '><ol>
+Yes, disabling options restores default WordPress behavior.</p></div><div id='tab-screenshots' class='cc-tab-pane' style='display:none;'><ol>
 <li>Simple toggle-based admin settings screen.</li>
-</ol></div><div id='tab-changelog' class='cc-tab-pane '><p>= 1.0 =</p>
+</ol></div><div id='tab-changelog' class='cc-tab-pane' style='display:none;'><h4>1.0.1 – 2025/06/25</h4>
 <ul>
-<li>Initial release with head cleanup, feature toggles, and system configuration settings.</li>
-</ul></div></div></div><div class='cc-sidebar'><p><strong>Version : </strong>1.0</p><p><strong>Author : </strong><a href='https://cclin.cc/' target='_blank' rel='noopener noreferrer'>cclin</a></p><p><strong>Requires WordPress : </strong>5.0</p><p><strong>Tested up to : </strong>6.5</p><p><strong>Requires PHP : </strong>7.0</p><p><strong>License : </strong>GPLv2 or later</p></div></div></div>
+<li>us parse-readme.sh to generate view-details.html file and view-dtails-zh_TW.html file,conditional display i18n html</li>
+<li>ccpo-settings to cchcs-settings</li>
+<li>delete compile-mo.sh</li>
+<li>modify readme.md</li>
+<li>change author url</li>
+<li>add i18n language and plugin View Detail</li>
+</ul>
+<h4>1.0.1 – 2025/05/28</h4>
+<ul>
+<li>rename repo name</li>
+</ul>
+<h4>1.0.1 – 2025/05/25</h4>
+<ul>
+<li>rename plugin name</li>
+</ul>
+<h4>1.0.1 – 2025/05/24</h4>
+<ul>
+<li>i18n</li>
+</ul>
+<h4>1.0.1 – 2025/05/23</h4>
+<ul>
+<li>rename</li>
+<li>modify</li>
+<li>edit .gitignore</li>
+<li>Remove .DS_Store from repository and update .gitignore</li>
+<li>modify readme</li>
+<li>Initial commit</li>
+</ul></div></div>
+<div class='cc-sidebar' style='width:30%; min-height:615px;padding:15px; border-left:1px solid #ccc; background:#f6f7f7;'><p><strong>Version:</strong> 1.0.1</p><p><strong>Author:</strong> <a href='https://cclin.cc/' target='_blank' rel='noopener noreferrer'>Chance Lin</a></p><p><strong>Requires WordPress:</strong> 5.0</p><p><strong>Tested up to:</strong> 6.5</p><p><strong>Requires PHP:</strong> 7.0</p><p><strong>License:</strong> GPLv2 or later</p><h3>Contributors</h3><p><a href='https://cclin.cc/' target='_blank' rel='noopener noreferrer'>Chance Lin</a></p><p><a href='https://www.paypal.me/chancelintw' target='_blank' rel='noopener noreferrer'>Donate to this plugin &gt;&gt;</a></p></div>
+</div>
+</div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-const tabs = document.querySelectorAll('.cc-tabs li');
-const panes = document.querySelectorAll('.cc-tab-pane');
-tabs.forEach(function(tab) {
-tab.addEventListener('click', function() {
-const target = tab.getAttribute('data-tab');
-tabs.forEach(t => t.classList.remove('active'));
-panes.forEach(p => p.classList.remove('active'));
-tab.classList.add('active');
-document.getElementById('tab-' + target).classList.add('active');
-});
-});
+    const tabs = document.querySelectorAll('.cc-tabs li');
+    const panes = document.querySelectorAll('.cc-tab-pane');
+    setTimeout(function() {
+        try {
+            var parentDocument = window.parent.document;
+            var tbWindow = parentDocument.getElementById('TB_window');
+
+            if (tbWindow) {
+                var tbtitle = tbWindow.querySelector('#TB_title');
+                if (tbtitle) {
+                    tbtitle.style.height = '0px';
+                }
+            }
+        } catch (e) {
+            console.warn('無法操作父層 Thickbox，可能是跨域限制', e);
+        }
+    }, 0);
+   // 設定父層 Thickbox iframe 高度
+    try {
+        var parentDocument = window.parent.document;
+        var iframe = parentDocument.getElementById('TB_iframeContent');
+        if (iframe && iframe.src.indexOf('view-details') > -1) {
+            iframe.style.height = '615px';
+        }
+    } catch (e) {
+        console.warn('無法操作父層 Thickbox，可能是跨域限制');
+    }
+
+    // 標籤切換功能
+    tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            const target = tab.getAttribute('data-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            panes.forEach(p => p.style.display = 'none');
+            tab.classList.add('active');
+            document.getElementById('tab-' + target).style.display = 'block';
+        });
+    });
 });
 </script>
-
-</body>
-</html>

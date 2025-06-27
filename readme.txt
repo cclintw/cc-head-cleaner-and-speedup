@@ -1,11 +1,12 @@
 === CC Head Cleaner & Speed Up ===
-Contributors: cclin
 Author URI: https://cclin.cc/
 Tags: performance, head cleanup, disable features, speed up, optimization, remove meta, remove scripts
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 7.0
-Stable tag: 1.0
+Stable tag: 1.0.1
+Contributors: Chance Lin
+Donate link: https://www.paypal.me/chancelintw
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +14,7 @@ Make your WordPress site faster and cleaner by removing unnecessary <head> eleme
 
 == Description ==
 
-**CC Head Cleaner & Speed Up** helps you easily optimize your WordPress site:
+helps you easily optimize your WordPress site:
 
 - Remove unnecessary meta, link, style, and script tags from your site's `<head>`
 - Disable unused WordPress features (emoji, oEmbed, RSS feeds, Heartbeat API)
@@ -43,10 +44,40 @@ Only system configuration options may write to `wp-config.php`.
 = Can I revert changes? =
 Yes, disabling options restores default WordPress behavior.
 
+
 == Changelog ==
 
-= 1.0 =
-* Initial release with head cleanup, feature toggles, and system configuration settings.
+
+
+#### 1.0.1 – 2025/06/25
+
+* us parse-readme.sh to generate view-details.html file and view-dtails-zh_TW.html file,conditional display i18n html
+* ccpo-settings to cchcs-settings
+* delete compile-mo.sh
+* modify readme.md
+* change author url
+* add i18n language and plugin View Detail
+
+#### 1.0.1 – 2025/05/28
+
+* rename repo name
+
+#### 1.0.1 – 2025/05/25
+
+* rename plugin name
+
+#### 1.0.1 – 2025/05/24
+
+* i18n
+
+#### 1.0.1 – 2025/05/23
+
+* rename
+* modify
+* edit .gitignore
+* Remove .DS_Store from repository and update .gitignore
+* modify readme
+* Initial commit
 
 == Upgrade Notice ==
 

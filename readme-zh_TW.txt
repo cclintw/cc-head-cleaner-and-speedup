@@ -6,14 +6,14 @@ Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 7.0
 Stable tag: 1.0
+Contributors: Chance Lin
+Donate link: https://www.paypal.me/chancelintw
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 透過移除多餘的 <head> 元素與停用不必要功能，讓您的 WordPress 網站更加快速、乾淨。
 
 == Description ==
-
-**CC Head Cleaner & Speed Up** 可協助您輕鬆優化 WordPress 網站：
 
 - 清理網站 `<head>` 區域，移除多餘 meta、link、style、script 標籤
 - 停用未使用功能，例如 emoji、oEmbed、RSS 訂閱、Heartbeat API
