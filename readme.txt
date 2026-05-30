@@ -1,127 +1,82 @@
 === CC Head Cleaner & Speed Up ===
-Author URI: https://cclin.cc/
-Tags: performance, head cleanup, disable features, speed up, optimization, remove meta, remove scripts
-Requires at least: 5.0
-Tested up to: 6.5
-Requires PHP: 7.0
+Contributors: cclin
+Tags: performance, cleanup, optimization, head, speed
+Requires at least: 5.8
+Tested up to: 6.9
+Requires PHP: 7.4
 Stable tag: 1.0.3
-Contributors: Chance Lin
-Donate link: https://www.paypal.me/chancelintw
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Make your WordPress site faster and cleaner by removing unnecessary <head> elements and disabling unused features.
+Clean WordPress head output and optionally disable selected features for a lighter frontend.
 
 == Description ==
 
-helps you easily optimize your WordPress site:
+CC Head Cleaner & Speed Up helps site owners reduce unused frontend head and header output, and optionally disable selected WordPress features from the admin area.
 
-- Remove unnecessary meta, link, style, and script tags from your site's `<head>`
-- Disable unused WordPress features (emoji, oEmbed, RSS feeds, Heartbeat API)
-- Fine-tune system settings like revisions, autosave interval, and memory limits
-- Move or remove heavy scripts like jQuery for faster load times
+The plugin focuses on small, explicit toggles. You choose what to remove or disable, and the plugin applies only those selected options.
 
-All settings are accessible via a simple admin interface — no coding required.
+Remove options only clean frontend output. Disable options turn off the related feature behavior and automatically include the matching output cleanup option where applicable.
+
+= Key Features =
+
+* Remove common WordPress head and header output such as generator, RSD, WLW manifest, shortlink, feed links, REST discovery, oEmbed discovery, adjacent post links, DNS prefetch, emoji output, block CSS, theme enhancement CSS, global styles, and classic theme styles.
+* Disable selected features such as global styles, image auto-sizes CSS, the block editor, emoji scripts, oEmbed routes, and RSS feed routes.
+* Remove frontend jQuery Migrate or frontend jQuery when your theme and plugins do not require them.
+* Close frontend comments and remove comment reply output.
+* Manage all options from Settings > Site Cleanup.
+
+= Designed for =
+
+* Site owners who want cleaner frontend output.
+* Developers who prefer explicit performance toggles instead of broad optimization bundles.
+* Lightweight WordPress installations where unused default features can be safely disabled.
+
+= Safety Notes =
+
+This plugin does not edit WordPress core files and does not write to wp-config.php.
+
+Some options can affect theme or plugin behavior, especially removing jQuery, disabling feeds, disabling oEmbed, or disabling the block editor. Test these options on a staging site before using them on a production site.
 
 == Installation ==
 
 1. Upload the plugin folder to `/wp-content/plugins/`.
-2. Activate the plugin via the "Plugins" menu.
-3. Go to **Settings > Site Cleanup** to configure the options.
-
-== Screenshots ==
-
-1. Simple toggle-based admin settings screen.
+2. Activate the plugin through the Plugins screen in WordPress.
+3. Go to Settings > Site Cleanup.
+4. Enable only the cleanup options that are appropriate for your site.
 
 == Frequently Asked Questions ==
 
 = Will this break my site? =
-Most options are safe. However, removing critical scripts like jQuery may affect themes or other plugins. Test before deployment.
 
-= Does this modify core files? =
-Only system configuration options may write to `wp-config.php`.
+Most options are safe for many sites, but some options intentionally remove WordPress features. If your theme or another plugin depends on jQuery, feeds, oEmbed, comments, or the block editor, disabling those features may affect behavior.
+
+= Does this plugin modify wp-config.php? =
+
+No. The plugin stores its options in the WordPress options table and does not write to wp-config.php.
 
 = Can I revert changes? =
-Yes, disabling options restores default WordPress behavior.
 
+Yes. Disable the option from Settings > Site Cleanup and save the settings.
+
+= Does this plugin include third-party libraries? =
+
+No. The plugin does not include third-party PHP or JavaScript libraries.
+
+== Screenshots ==
+
+1. Toggle-based settings screen.
 
 == Changelog ==
 
+= 1.0.3 =
 
-
-#### 1.0.3 – 2025/06/27
-
-* version 1.0.3
-
-#### 1.0.3 – 2025/06/25
-
-* us parse-readme.sh to generate view-details.html file and view-dtails-zh_TW.html file,conditional display i18n html
-* ccpo-settings to cchcs-settings
-* delete compile-mo.sh
-* modify readme.md
-* change author url
-* add i18n language and plugin View Detail
-
-#### 1.0.3 – 2025/05/28
-
-* rename repo name
-
-#### 1.0.3 – 2025/05/25
-
-* rename plugin name
-
-#### 1.0.3 – 2025/05/24
-
-* i18n
-
-#### 1.0.3 – 2025/05/23
-
-* rename
-* modify
-* edit .gitignore
-* Remove .DS_Store from repository and update .gitignore
-* modify readme
-* Initial commit
-
-#### 1.0.1 – 2025/06/27
-
-* version 1.0.3
-
-#### 1.0.1 – 2025/06/25
-
-* us parse-readme.sh to generate view-details.html file and view-dtails-zh_TW.html file,conditional display i18n html
-* ccpo-settings to cchcs-settings
-* delete compile-mo.sh
-* modify readme.md
-* change author url
-* add i18n language and plugin View Detail
-
-#### 1.0.1 – 2025/05/28
-
-* rename repo name
-
-#### 1.0.1 – 2025/05/25
-
-* rename plugin name
-
-#### 1.0.1 – 2025/05/24
-
-* i18n
-
-#### 1.0.1 – 2025/05/23
-
-* rename
-* modify
-* edit .gitignore
-* Remove .DS_Store from repository and update .gitignore
-* modify readme
-* Initial commit
+* Prepared plugin structure, documentation, sanitization, escaping, and file layout for WordPress.org review.
+* Removed direct wp-config.php writing.
+* Removed unused generated detail files and unused helper library.
 
 == Upgrade Notice ==
 
-= 1.0 =
-Initial release, safely remove unnecessary head output and disable unused features to improve speed.
+= 1.0.3 =
 
-== License ==
-
-This plugin is licensed under the GPLv2 or later.
+Improves WordPress.org compliance and removes direct wp-config.php modification.
