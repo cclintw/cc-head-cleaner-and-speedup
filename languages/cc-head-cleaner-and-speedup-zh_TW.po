@@ -19,7 +19,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: cc-head-cleaner-and-speedup.php
 msgid "CC Head Cleaner & Speed Up"
-msgstr "CC Head Cleaner & Speed Up"
+msgstr "CC 網站 Head 清理與加速"
 
 #. Description of the plugin
 #: cc-head-cleaner-and-speedup.php
@@ -274,15 +274,15 @@ msgstr "說明"
 
 #: includes/settings-page.php:16
 msgid "Site Cleaner & Speed Up"
-msgstr "網站清理與加速"
+msgstr "CC 網站清理與加速"
 
 #: includes/settings-page.php:17
 msgid "Site Cleanup"
-msgstr "網站清理"
+msgstr "CC 網站清理"
 
 #: includes/settings-ui.php:15
 msgid "Site Head Cleaner & Speed Up"
-msgstr "網站 head 清理與加速"
+msgstr "CC 網站 Head 清理與加速"
 
 #~ msgid "Removes REST API discovery link."
 #~ msgstr "移除 REST API 探索連結。"
