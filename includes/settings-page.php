@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function cchcs_add_settings_page()
 {
     add_options_page(
-        __('Site Cleaner & Speed Up', 'cc-head-cleaner-and-speedup'),
-        __('Site Cleanup', 'cc-head-cleaner-and-speedup'),
+        __('CC Site Cleaner & Speed Up', 'cc-head-cleaner-and-speedup'),
+        __('CC Site Cleanup', 'cc-head-cleaner-and-speedup'),
         'manage_options',
         'cchcs-settings',
         'cchcs_render_settings_page'

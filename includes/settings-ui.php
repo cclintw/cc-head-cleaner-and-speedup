@@ -12,7 +12,7 @@ if (! defined('ABSPATH')) {
 require_once CCHCS_PLUGIN_DIR . 'includes/settings-data.php';
 ?>
 <div class="wrap">
-	<h1><?php esc_html_e('Site Head Cleaner & Speed Up', 'cc-head-cleaner-and-speedup'); ?></h1>
+	<h1><?php esc_html_e('CC Site Head Cleaner & Speed Up', 'cc-head-cleaner-and-speedup'); ?></h1>
 
 	<form method="post" action="options.php">
 		<?php

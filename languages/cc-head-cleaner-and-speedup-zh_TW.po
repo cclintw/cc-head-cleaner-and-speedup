@@ -273,15 +273,15 @@ msgid "Notes"
 msgstr "說明"
 
 #: includes/settings-page.php:16
-msgid "Site Cleaner & Speed Up"
+msgid "CC Site Cleaner & Speed Up"
 msgstr "CC 網站清理與加速"
 
 #: includes/settings-page.php:17
-msgid "Site Cleanup"
+msgid "CC Site Cleanup"
 msgstr "CC 網站清理"
 
 #: includes/settings-ui.php:15
-msgid "Site Head Cleaner & Speed Up"
+msgid "CC Site Head Cleaner & Speed Up"
 msgstr "CC 網站 Head 清理與加速"
 
 #~ msgid "Removes REST API discovery link."
